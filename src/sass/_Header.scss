@@ -1,5 +1,30 @@
-.Header {
-  background: black;
-  height: 100px;
-  width: 100px;
+.header {
+  background: gray;
+
+  &-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+
+    &__logo {
+      font-size: 1.5rem;
+      font-weight: bolder;
+
+      &::before {
+        content: '';
+        background-image: url("../../public/icons8-globe-flatart-icons-flat-96.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 30px;
+        margin-right: 15px;
+      }
+      &-element {
+        color: lightgray;
+      }
+    }
+  }
 }
