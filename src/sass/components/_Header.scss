@@ -1,17 +1,24 @@
 .header {
-  background: gray;
+  background: $color-header-navBar;
+  border-bottom: toRem(2) solid black;
+  box-shadow: 0 0 10px 0 black;
 
   &-container {
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    height: 100px;
+    height: toRem(100);
     align-items: center;
+    min-width: 900px;
 
     &__logo {
-      font-size: 1.5rem;
+      font-size: toRem(30);
       font-weight: bolder;
+      font-family: "DejaVu Sans";
+      text-decoration: none;
+      color: $color-header-logo;
+      position: relative;
 
       &::before {
         content: '';
@@ -19,12 +26,29 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        padding: 30px;
-        margin-right: 15px;
+        padding: toRem(25);
+        margin-right: toRem(5);
+        position: relative;
+        bottom: toRem(20);
       }
+
       &-element {
-        color: lightgray;
+        color: $color-header-logo_elements;
+        font-family: "Charmonman";
       }
+    }
+
+    &__nav {
+        a{
+          margin: toRem(50);
+          font-size: toRem(28);
+          text-decoration: none;
+          font-family: "Rasa SemiBold";
+          color: $color-header-navBar_elements;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
     }
   }
 }
