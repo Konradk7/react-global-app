@@ -1,6 +1,7 @@
 import React from 'react';
 import SignIn from "./SignIn";
 import Register from "./Register";
+import Weather from "./Weather";
 
 function Main(props) {
     return (
@@ -8,6 +9,7 @@ function Main(props) {
             <div className="main-container">
             {/*<SignIn />*/}
             {/*    <Register />*/}
+                <Weather />
             </div>
         </div>
     );
