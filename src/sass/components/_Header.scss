@@ -2,7 +2,7 @@
 .header {
   background: $color-header-navBar;
   border-bottom: toRem(2) solid black;
-  box-shadow: 0 0 10px 0 black;
+
 
 
   &-container {
@@ -10,10 +10,9 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    height: 9.8vh;
+    height: toRem(97);
     align-items: center;
     min-width: 900px;
-
     &__logo {
       font-size: toRem(30);
       font-weight: bolder;

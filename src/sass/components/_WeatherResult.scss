@@ -1,0 +1,58 @@
+.weather-container {
+  width: toRem(159);
+  height: toRem(140);
+  background-image: $color-weather-container;
+  border: toRem(6) solid $color-border-app-boxes;
+  padding: toRem(5);
+  box-shadow: 0 0 toRem(3) 0 $color-shadow-app-boxes;
+  border-radius: toRem(7);
+
+  &:hover {
+    padding: toRem(6);
+    box-shadow: 0 0 toRem(5) 0 darken($color-shadow-app-boxes, 50%);
+  }
+
+  &__head {
+    font-size: toRem(27);
+    color: $color-weather-head;
+    font-family: "Rasa SemiBold";
+  }
+
+  &__body {
+    font-family: "Bitstream Charter";
+    font-size: toRem(19);
+
+
+    &:last-child {
+      border-top: toRem(3) solid black;
+
+    }
+  }
+
+  &__head, &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      height: toRem(45);
+      position: relative;
+      border-left: toRem(3) solid black;
+      padding: toRem(2);
+
+    }
+
+    &:first-child {
+      border-bottom: toRem(3) solid black;
+    }
+  }
+}
+
+.weather-form {
+  padding: toRem(10);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
