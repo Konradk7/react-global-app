@@ -6,7 +6,7 @@ import night from '../images/night.png';
 import hot from '../images/hot.png';
 import cold from '../images/cold.png';
 
-function WeatherResult({city, time, temp, sun, err}) {
+function WeatherResult({city, time, temp, sun, remove}) {
     if (city.length === 0) return null
 
     const sunriseTime = new Date(sun * 1000).toLocaleTimeString()
@@ -35,6 +35,7 @@ function WeatherResult({city, time, temp, sun, err}) {
 
         </div>
         : <p className="weather-container__loading">Pobieram informacje...</p>}
+    <button onClick={remove}>Usuń</button>
     </div>
     );
 }

@@ -11,9 +11,8 @@
 3. Type's of alert's (e.g. work-alert, dinner-alert etc.).
 4. Cryptocurrency counter. We can add exactly this which we want to see. (everything by external API).
 5. Notes which types(important, private...), comments and buttons (some kind of TODO app.).
-6. We could make our own account with profile-photo, info etc.
 7. Weather from our city (another external API).
-8. Account type like CEO type: admin who could make public alerts for employee's
+
 
 * And another we will see soon..
 

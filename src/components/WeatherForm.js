@@ -15,6 +15,7 @@ function WeatherForm({value, change, submit}) {
             <input
                 type="submit"
                 className="weather-form__input-submit"/>
+
         </form>
     );
 }

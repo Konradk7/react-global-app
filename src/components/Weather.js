@@ -17,42 +17,49 @@ function Weather(props) {
         setValue(e.target.value);
 
     }
+    const handleRemoveItem = (e) => {
+        e.preventDefault()
+        setCity("")
+        setTemp(false)
+    }
 
     const handleCitySubmit = (e) => {
         e.preventDefault();
         setCity(value)
 
+        const APIUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${APIKey}&units=metric`;
+        fetch(APIUrl)
+            .then(response => {
+                if (response.ok) {
+                    return response
+                }
+                throw Error("Nie udało się")
+            })
+            .then(response => response.json())
+            .then(data => {
 
+                setTemp(data.main.temp)
+                setCity(value[0].toLocaleUpperCase() + value.slice(1))
+                setSun(data.sys.sunrise)
+                setErr(false);
+
+            })
+            .catch(err => {
+                console.log(err);
+                setErr(true)
+
+
+            })
     }
 
 
     useEffect(() => {
+
         const intervalId = setInterval(() => {
-            const APIUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${APIKey}&units=metric`;
+
             if (city.length === 0) return
-            fetch(APIUrl)
-                .then(response => {
-                    if (response.ok) {
-                        return response
-                    }
-                    throw Error("Nie udało się")
-                })
-                .then(response => response.json())
-                .then(data => {
-                    const actualTime = new Date().toLocaleTimeString();
-                    setTime(actualTime)
-                    setTemp(data.main.temp)
-                    setCity(value[0].toLocaleUpperCase() + value.slice(1))
-                    setSun(data.sys.sunrise)
-                    setErr(false);
-
-                })
-                .catch(err => {
-                    console.log(err);
-                    setErr(true)
-
-
-                })
+            const actualTime = new Date().toLocaleTimeString();
+            setTime(actualTime)
             return () => {
                 clearInterval(intervalId);
             };
@@ -65,10 +72,11 @@ function Weather(props) {
     return (
         <div className='weather-app'>
 
-            {/*{!temp ? */}
-                <WeatherForm value={value} change={handleInputChange} submit={handleCitySubmit}/>
-                {/*// : ''}*/}
-            {!err ? <WeatherResult city={city} time={time} temp={temp} sun={sun} err={err}/> : <h3 className="weather-app__error-message">I don't know this city!</h3>}
+            {!temp ?
+            <WeatherForm value={value} change={handleInputChange} submit={handleCitySubmit} />
+            : ''}
+            {!err ? <WeatherResult city={city} time={time} temp={temp} sun={sun} err={err} remove={handleRemoveItem}/> :
+                <h3 className="weather-app__error-message">I don't know this city!</h3>}
         </div>
     )
 }
