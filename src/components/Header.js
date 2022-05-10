@@ -1,5 +1,7 @@
 import React from 'react';
-
+import {
+    Link
+} from "react-router-dom";
 function Header(props) {
     return (
         <div className="header">
@@ -10,8 +12,8 @@ function Header(props) {
                 </a>
 
                 <nav className="header-container__nav">
-                    <a href="/">Home</a>
-                    <a href="/myApps">My Apps</a>
+                    <Link to="/">Home</Link>
+                    <Link to="/my-apps">My Apps</Link>
                     <a href="/contact">Contact</a>
                     <a href="/signIn">Zaloguj</a>
                     {/*<div className="header-container__nav-hamburger">*/}

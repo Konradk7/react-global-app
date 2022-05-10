@@ -1,25 +1,37 @@
 
 .weather-container {
-  width: toRem(159);
-  height: toRem(142);
+  width: toRem(169);
+  height: toRem(145);
   background-image: $color-weather-container;
   border: toRem(6) solid $color-border-app-boxes;
-  padding: toRem(7);
+  padding: toRem(12) toRem(9);
   box-shadow: 0 0 toRem(3) 0 $color-shadow-app-boxes;
   border-radius: toRem(7);
 
 
   &__head {
-    font-size: toRem(30);
+    font-size: toRem(28);
     color: $color-weather-head;
     font-family: "Rasa SemiBold";
+    height: 3vh;
+    width: 13.5vmin;
+    line-height: toRem(22);
+    padding: 5px 0;
+    display: flex;
+
+
+    p {
+      max-width: 70%;
+      text-overflow-mode: ellipsis;
+    }
 
 
     &-remove {
       font-size: toRem(30);
       color: lighten($color-error-message, 90%);
-      margin-right: toRem(14);
+      margin-right: toRem(5);
       transform: scaleX(2);
+
       &:hover {
         //transform: scale(1,2);
         transition: 0.4s;
@@ -32,7 +44,7 @@
 
   &__body {
     font-family: "Bitstream Charter";
-    font-size: toRem(19);
+    font-size: toRem(20);
     color: $color-weather-body;
 
     &-spin {
@@ -52,13 +64,15 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    &::after{
+
+    &::after {
       content: "";
       border-right: toRem(3) solid black;
       height: toRem(49);
-      width: toRem(107);
+      width: toRem(117);
       position: absolute;
     }
+
     img {
       height: toRem(45);
       position: relative;
@@ -68,8 +82,8 @@
 
     &:first-child {
       border-bottom: toRem(3) solid black;
-
     }
+
   }
 
   &__loading {

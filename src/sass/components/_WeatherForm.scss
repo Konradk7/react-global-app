@@ -1,7 +1,7 @@
 .weather-app {
   padding: toRem(10);
   display: flex;
-  width: toRem(180);
+  width: toRem(200);
   flex-direction: column-reverse;
 
   &:hover {
@@ -25,7 +25,7 @@
   &__input-text {
     border-radius: toRem(8);
     background-color: $color-weather-form-input;
-    width: toRem(170);
+    width: toRem(190);
     display: flex;
     align-items: center;
     border: toRem(3) solid $color-weather-form-border;
