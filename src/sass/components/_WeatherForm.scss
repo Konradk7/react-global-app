@@ -1,0 +1,53 @@
+.weather-app {
+  padding: toRem(10);
+  display: flex;
+  width: toRem(180);
+  flex-direction: column-reverse;
+
+  &:hover {
+    cursor: pointer;
+  }
+  &__error-message {
+    border: toRem(3) solid black;
+    box-shadow: 0 0 toRem(5) 0 black;
+    background-color: $color-error-message;
+    cursor: default;
+    font-family: "Droid Sans";
+    padding: 10px 20px;
+    text-align: center;
+text-transform: uppercase;
+  }
+}
+
+.weather-form {
+
+  &__input-text {
+    border-radius: toRem(8);
+    background-color: $color-weather-form-input;
+    width: toRem(170);
+    display: flex;
+    align-items: center;
+    border: toRem(3) solid $color-weather-form-border;
+    margin: toRem(10) 0;
+    &::placeholder{
+      padding: toRem(56);
+      color: white;
+      opacity: 60%;
+      font-weight: bolder;
+    }
+  }
+
+  &__input-submit {
+    width: 100%;
+    font-weight: bolder;
+    border: toRem(3) solid $color-weather-form-border;
+    border-radius: toRem(8);
+    color: $color-weather-head;
+    background-color: $color-weather-form-input;
+    cursor: pointer;
+    &:hover {
+      background-color: darken($color-weather-form-input, 10%);
+
+    }
+  }
+}

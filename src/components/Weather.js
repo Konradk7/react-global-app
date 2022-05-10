@@ -20,16 +20,16 @@ function Weather(props) {
 
     const handleCitySubmit = (e) => {
         e.preventDefault();
-         setCity(value)
+        setCity(value)
+
+
     }
-
-
 
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-        const APIUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${APIKey}&units=metric`;
-        if(city.length === 0) return
+            const APIUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${APIKey}&units=metric`;
+            if (city.length === 0) return
             fetch(APIUrl)
                 .then(response => {
                     if (response.ok) {
@@ -51,21 +51,24 @@ function Weather(props) {
                     console.log(err);
                     setErr(true)
 
+
                 })
             return () => {
-            clearInterval(intervalId);
-         };
+                clearInterval(intervalId);
+            };
 
 
-         },1000)
+        }, 1000)
     }, [city])
 
 
     return (
-        <div className='weather-form'>
+        <div className='weather-app'>
 
-            {!city && <WeatherForm value={value} change={handleInputChange} submit={handleCitySubmit} /> }
-            {!err ? <WeatherResult city={city} time={time} temp={temp} sun={sun} err={err}/> : "I don't know this city"}
+            {/*{!temp ? */}
+                <WeatherForm value={value} change={handleInputChange} submit={handleCitySubmit}/>
+                {/*// : ''}*/}
+            {!err ? <WeatherResult city={city} time={time} temp={temp} sun={sun} err={err}/> : <h3 className="weather-app__error-message">I don't know this city!</h3>}
         </div>
     )
 }

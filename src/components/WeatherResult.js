@@ -8,6 +8,7 @@ import cold from '../images/cold.png';
 
 function WeatherResult({city, time, temp, sun, err}) {
     if (city.length === 0) return null
+
     const sunriseTime = new Date(sun * 1000).toLocaleTimeString()
 
     return (
@@ -33,7 +34,7 @@ function WeatherResult({city, time, temp, sun, err}) {
                 </h3>}
 
         </div>
-        : <p>Pobieram informacje...</p>}
+        : <p className="weather-container__loading">Pobieram informacje...</p>}
     </div>
     );
 }
