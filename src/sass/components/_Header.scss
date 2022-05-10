@@ -1,3 +1,4 @@
+
 .header {
   background: $color-header-navBar;
   border-bottom: toRem(2) solid black;
@@ -48,7 +49,44 @@
           &:last-child {
             margin-right: 0;
           }
+          //@include mobile {
+          //  display: none;
+          //}
+          &:hover{
+            padding-bottom: toRem(29);
+            border-bottom: toRem(2) solid $color-header-navBar_elements-hover;
+            color: $color-header-navBar_elements-hover;
+
+          }
         }
+
     }
+
   }
 }
+//.header-container__nav-hamburger {
+//  display: none;
+//
+//  padding: 2px;
+//  cursor: pointer;
+//  margin-right: 5px;
+//  &:hover{
+//    display: block;
+//    box-shadow: 0 0 3px 0 gray;
+//  }
+//  @include mobile {
+//    display: block;
+//
+//  }
+//  span{
+//    background: black;
+//    width: 65px;
+//    height: 12px;
+//    margin: 7px;
+//    border-radius: 13px;
+//
+//    @include mobile {
+//      display: block;
+//    }
+//  }
+//}

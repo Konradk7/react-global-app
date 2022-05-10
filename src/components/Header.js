@@ -13,6 +13,11 @@ function Header(props) {
                     <a href="/myApps">My Apps</a>
                     <a href="/contact">Contact</a>
                     <a href="/signIn">Zaloguj</a>
+                    {/*<div className="header-container__nav-hamburger">*/}
+                    {/*<span></span>*/}
+                    {/*<span></span>*/}
+                    {/*<span></span>*/}
+                    {/*</div>*/}
                 </nav>
 
             </div>
