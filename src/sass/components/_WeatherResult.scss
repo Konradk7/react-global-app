@@ -1,27 +1,45 @@
+
 .weather-container {
   width: toRem(159);
-  height: toRem(140);
+  height: toRem(142);
   background-image: $color-weather-container;
   border: toRem(6) solid $color-border-app-boxes;
-  padding: toRem(5);
+  padding: toRem(7);
   box-shadow: 0 0 toRem(3) 0 $color-shadow-app-boxes;
   border-radius: toRem(7);
 
-  &:hover {
-    padding: toRem(6);
-    box-shadow: 0 0 toRem(5) 0 darken($color-shadow-app-boxes, 50%);
-  }
 
   &__head {
-    font-size: toRem(27);
+    font-size: toRem(30);
     color: $color-weather-head;
     font-family: "Rasa SemiBold";
+
+
+    &-remove {
+      font-size: toRem(30);
+      color: lighten($color-error-message, 90%);
+      margin-right: toRem(14);
+      transform: scaleX(2);
+      &:hover {
+        //transform: scale(1,2);
+        transition: 0.4s;
+        color: $color-error-message;
+
+
+      }
+    }
   }
 
   &__body {
     font-family: "Bitstream Charter";
     font-size: toRem(19);
+    color: $color-weather-body;
 
+    &-spin {
+      animation: spin 1s infinite;
+      animation-duration: 20s;
+      transition: 0.1s;
+    }
 
     &:last-child {
       border-top: toRem(3) solid black;
@@ -33,25 +51,35 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    position: relative;
+    &::after{
+      content: "";
+      border-right: toRem(3) solid black;
+      height: toRem(49);
+      width: toRem(107);
+      position: absolute;
+    }
     img {
       height: toRem(45);
       position: relative;
-      border-left: toRem(3) solid black;
       padding: toRem(2);
 
     }
 
     &:first-child {
       border-bottom: toRem(3) solid black;
+
     }
   }
-  &__loading{
-    font-size: toRem(20);
-    text-align: center;
-    font-weight: bolder;
-    color: white;
-    opacity: 10%;
+
+  &__loading {
+    margin: 20px auto;
+    font-size: 40px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    animation: loading 1.7s infinite ease;
+
   }
 }
 

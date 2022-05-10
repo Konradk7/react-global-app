@@ -7,6 +7,7 @@
   &:hover {
     cursor: pointer;
   }
+
   &__error-message {
     border: toRem(3) solid black;
     box-shadow: 0 0 toRem(5) 0 black;
@@ -15,7 +16,7 @@
     font-family: "Droid Sans";
     padding: 10px 20px;
     text-align: center;
-text-transform: uppercase;
+    text-transform: uppercase;
   }
 }
 
@@ -29,7 +30,8 @@ text-transform: uppercase;
     align-items: center;
     border: toRem(3) solid $color-weather-form-border;
     margin: toRem(10) 0;
-    &::placeholder{
+
+    &::placeholder {
       padding: toRem(56);
       color: white;
       opacity: 60%;
@@ -45,6 +47,7 @@ text-transform: uppercase;
     color: $color-weather-head;
     background-color: $color-weather-form-input;
     cursor: pointer;
+
     &:hover {
       background-color: darken($color-weather-form-input, 10%);
 

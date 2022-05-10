@@ -40,7 +40,7 @@ function Weather(props) {
 
                 setTemp(data.main.temp)
                 setCity(value[0].toLocaleUpperCase() + value.slice(1))
-                setSun(data.sys.sunrise)
+                setSun(data.sys.sunset)
                 setErr(false);
 
             })
