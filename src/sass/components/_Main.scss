@@ -1,0 +1,11 @@
+@use "sass:math";
+.main {
+  background: $color-main-background-side;
+  height: 90vh;
+  .main-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: $color-main-background;
+    height: 90vh;
+  }
+}
