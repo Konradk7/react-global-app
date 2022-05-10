@@ -26,11 +26,73 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 200px;
-    box-shadow: 0 0 5px 0 black;
-    padding: 20px;
-    margin-top: 10px;
-    border: 3px solid black;
+    width: toRem(200);
+    box-shadow: 0 0 toRem(5) 0 black;
+    padding: toRem(20);
+    margin-top: toRem(10);
+    border: toRem(3) solid black;
+
+    &__title {
+      color: white;
+      font-weight: bolder;
+      font-size: toRem(20);
+      border-bottom: toRem(3) solid black;
+      margin-bottom: toRem(10);
+      padding-bottom: toRem(10);
+      font-family: "Abyssinica SIL";
+
+    }
+
+    &__text {
+      font-weight: bold;
+      font-size: toRem(20);
+      background-image: $color-weather-container;
+      border: toRem(3) solid black;
+      box-shadow: 0 0 toRem(1) 0 black;
+      margin: toRem(10) 0;
+      padding: toRem(5);
+      border-radius: toRem(20);
+      opacity: 95%;
+      color: black;
+    }
+    &__footer{
+      font-size: toRem(20);
+      background: rgba(112,255,129,0.65);
+      //font-weight: normal;
+      opacity: 90%;
+      border-radius: toRem(20);
+      padding: toRem(5);
+    }
+    &__list {
+      background: $color-weather-container;
+      border: toRem(4) solid black;
+      box-shadow: 0 0 toRem(5) 0 black;
+      margin: toRem(15) 0;
+
+
+      &-element {
+        list-style: none;
+        font-weight: bolder;
+        font-size: toRem(25);
+        border-bottom: toRem(3) solid black;
+        width: toRem(120);
+        display: flex;
+        justify-content: center;
+        font-family: "Roboto Thin";
+        &:first-child{
+          color: white;
+        }
+        &:nth-child(2){
+          color: red;
+        }
+        &:last-child {
+          border: none;
+          color: gold;
+        }
+
+
+      }
+    }
   }
 
   &__input-text {
