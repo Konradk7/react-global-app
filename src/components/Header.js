@@ -5,7 +5,8 @@ function Header(props) {
         <div className="header">
             <div className="header-container">
                 <a href="/" className="header-container__logo">
-                    Coders<span className="header-container__logo-element">KK</span>
+                    Coders
+                    <span className="header-container__logo-element">KK</span>
                 </a>
 
                 <nav className="header-container__nav">

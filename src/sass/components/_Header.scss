@@ -55,9 +55,10 @@
         //  display: none;
         //}
         &:hover {
-          padding-bottom: toRem(29);
+          padding-bottom: toRem(26);
           border-bottom: toRem(2) solid $color-header-navBar_elements-hover;
           color: $color-header-navBar_elements-hover;
+
 
         }
       }

@@ -1,0 +1,66 @@
+.register {
+  position: relative;
+  min-width: 1400px;
+
+  .register-container {
+    background: lightgray;
+    width: 50%;
+
+    position: relative;
+    left: toRem(250);
+    top: toRem(50);
+    padding: toRem(50) toRem(100);
+    box-shadow: 0 0 toRem(5) 0 black;
+
+    &-logo {
+      font-size: toRem(35);
+      font-family: "Bitstream Charter";
+      cursor: default;
+    }
+
+    &-form {
+
+      input {
+        display: block;
+        width: 100%;
+        height: toRem(30);
+        margin-bottom: toRem(10);
+
+      }
+
+      &__checkbox {
+        position: relative;
+        bottom: toRem(58);
+        width: toRem(10);
+        left: toRem(320);
+        cursor: pointer;
+      }
+
+      &__param {
+        background: white;
+        padding: toRem(20);
+        cursor: pointer;
+        box-shadow: 0 0 1px 0 black;
+
+        &:hover {
+          box-shadow: 0 0 5px 0 black;
+        }
+      }
+
+      &__button {
+        padding: toRem(10) toRem(25);
+        margin-left: toRem(550);
+        border-radius: toRem(8);
+        border: none;
+        cursor: pointer;
+        background: gray;
+        font-size: toRem(25);
+        font-weight: bolder;
+        &:hover{
+          box-shadow: 0 0 5px 0 black;
+        }
+      }
+
+    }
+  }
+}
