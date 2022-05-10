@@ -14,13 +14,24 @@
     background-color: $color-error-message;
     cursor: default;
     font-family: "Droid Sans";
-    padding: 10px 20px;
+    padding: toRem(10) toRem(20);
     text-align: center;
     text-transform: uppercase;
   }
 }
 
 .weather-form {
+  &-container {
+    background-image: url("../../images/weather.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    box-shadow: 0 0 5px 0 black;
+    padding: 20px;
+    margin-top: 10px;
+    border: 3px solid black;
+  }
 
   &__input-text {
     border-radius: toRem(8);

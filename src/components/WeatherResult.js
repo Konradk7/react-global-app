@@ -17,7 +17,7 @@ function WeatherResult({city, time, temp, sun, remove}) {
             {temp ?
                 <div className="weather-container">
 
-                    <h3 className="weather-container__head"><p style={{ textOverflowMode: "ellipsis"}}>{city}</p>
+                    <h3 className="weather-container__head"><p >{city}</p>
                         <span className="weather-container__head-remove" onClick={remove}>X</span>
                     </h3>
 
