@@ -1,8 +1,9 @@
 .weather-app {
   padding: toRem(10);
   display: flex;
-  width: toRem(200);
+  width: toRem(250);
   flex-direction: column-reverse;
+
 
   &:hover {
     cursor: pointer;
@@ -21,16 +22,18 @@
 }
 
 .weather-form {
+
   &-container {
     background-image: url("../../images/weather.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: toRem(200);
+    width: toRem(204);
     box-shadow: 0 0 toRem(5) 0 black;
     padding: toRem(20);
     margin-top: toRem(10);
     border: toRem(3) solid black;
+    border-radius: toRem(8) toRem(8) 0 0;
 
     &__title {
       color: white;
@@ -45,7 +48,7 @@
 
     &__text {
       font-weight: bold;
-      font-size: toRem(20);
+      font-size: toRem(17);
       background-image: $color-weather-container;
       border: toRem(3) solid black;
       box-shadow: 0 0 toRem(1) 0 black;
@@ -55,14 +58,16 @@
       opacity: 95%;
       color: black;
     }
-    &__footer{
+
+    &__footer {
       font-size: toRem(20);
-      background: rgba(112,255,129,0.65);
+      background: rgba(112, 255, 129, 0.65);
       //font-weight: normal;
       opacity: 90%;
       border-radius: toRem(20);
       padding: toRem(5);
     }
+
     &__list {
       background: $color-weather-container;
       border: toRem(4) solid black;
@@ -79,12 +84,15 @@
         display: flex;
         justify-content: center;
         font-family: "Roboto Thin";
-        &:first-child{
+
+        &:first-child {
           color: white;
         }
-        &:nth-child(2){
+
+        &:nth-child(2) {
           color: red;
         }
+
         &:last-child {
           border: none;
           color: gold;
@@ -96,13 +104,13 @@
   }
 
   &__input-text {
-    border-radius: toRem(8);
-    background-color: $color-weather-form-input;
-    width: toRem(190);
+
+    background-image: $color-weather-form-input;
+    width: toRem(240);
     display: flex;
     align-items: center;
     border: toRem(3) solid $color-weather-form-border;
-    margin: toRem(10) 0;
+
 
     &::placeholder {
       padding: toRem(56);
@@ -116,13 +124,13 @@
     width: 100%;
     font-weight: bolder;
     border: toRem(3) solid $color-weather-form-border;
-    border-radius: toRem(8);
+    border-radius: 0 0 toRem(12) toRem(12);
     color: $color-weather-head;
-    background-color: $color-weather-form-input;
+    background-image: $color-weather-form-input;
     cursor: pointer;
 
     &:hover {
-      background-color: darken($color-weather-form-input, 10%);
+      background-image: $color-weather-form-input;
 
     }
   }

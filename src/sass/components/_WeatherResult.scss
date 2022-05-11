@@ -1,7 +1,9 @@
 
 .weather-container {
-  width: toRem(169);
-  height: toRem(145);
+  min-width: toRem(189);
+  max-width: toRem(189);
+  min-height: toRem(145);
+
   background-image: $color-weather-container;
   border: toRem(6) solid $color-border-app-boxes;
   padding: toRem(12) toRem(9);
@@ -13,33 +15,40 @@
     font-size: toRem(28);
     color: $color-weather-head;
     font-family: "Rasa SemiBold";
-    height: 3vh;
-    width: 13.5vmin;
+    min-height: 3.5vh;
+    max-height: 3.5vh;
+    width: toRem(100);
     line-height: toRem(22);
-    padding: 5px 0;
+    padding: toRem(5) 0;
     display: flex;
+    justify-content: space-between;
 
 
-    p {
-      max-width: 70%;
-      text-overflow-mode: ellipsis;
-    }
+    //p {
+    //  max-width: 80%;
+    //  text-overflow-mode: ellipsis;
+    //
+    //}
+
+  &-remove {
 
 
-    &-remove {
-      font-size: toRem(30);
+    &-btn {
+      font-size: toRem(35);
       color: lighten($color-error-message, 90%);
-      margin-right: toRem(5);
-      transform: scaleX(2);
+      margin: 0 toRem(10.5);
+      min-height: toRem(20);
 
+      border-left: toRem(3) solid black;
+      padding-left: toRem(19);
       &:hover {
-        //transform: scale(1,2);
         transition: 0.4s;
         color: $color-error-message;
 
 
       }
     }
+  }
   }
 
   &__body {
@@ -63,25 +72,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-
-    &::after {
-      content: "";
-      border-right: toRem(3) solid black;
-      height: toRem(49);
-      width: toRem(117);
-      position: absolute;
+    //position: relative;
+    .weather-border{
+      border-left: toRem(3) solid black;
     }
 
     img {
       height: toRem(45);
-      position: relative;
+      //position: relative;
       padding: toRem(2);
 
     }
 
     &:first-child {
       border-bottom: toRem(3) solid black;
+      width: 100%;
+
     }
 
   }

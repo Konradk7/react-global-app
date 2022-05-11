@@ -17,15 +17,15 @@ function WeatherResult({city, time, temp, sun, remove}) {
             {temp ?
                 <div className="weather-container">
 
-                    <h3 className="weather-container__head"><p >{city}</p>
-                        <span className="weather-container__head-remove" onClick={remove}>X</span>
+                    <h3 className="weather-container__head">{city}
+                        <p className="weather-container__head-remove" ><span className="weather-container__head-remove-btn" onClick={remove}>X</span></p>
                     </h3>
 
                     <h3 className="weather-container__body">
                         {time}
                         {time < sunsetTime
-                            ? <img className="weather-container__body-spin" src={day} alt="Day"/>
-                            : <img className="weather-container__body-fog" src={night} alt="Night"/>
+                            ? <p className="weather-border"><img className="weather-container__body-spin" src={day} alt="Day"/></p>
+                            : <p className="weather-border"><img className="weather-container__body-fog" src={night} alt="Night"/></p>
                         }
                     </h3>
                     {!temp
@@ -33,8 +33,8 @@ function WeatherResult({city, time, temp, sun, remove}) {
                         : <h3 className="weather-container__body">
                             {temp}&#176;C
                             {temp >= 20
-                                ? <img src={hot} alt="Hot"/>
-                                : <img src={cold} alt="Cold"/>
+                                ? <p className="weather-border"><img src={hot} alt="Hot"/></p>
+                                : <p className="weather-border"><img src={cold} alt="Cold"/></p>
                             }
                         </h3>}
 
