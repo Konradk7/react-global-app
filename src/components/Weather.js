@@ -72,12 +72,17 @@ function Weather(props) {
 
     return (
         <div className='weather-app'>
-
-            {!temp && <WeatherForm value={value} change={handleInputChange} submit={handleCitySubmit} />}
             {err ? <h3 className="weather-app__error-message">I don't know this city!</h3>
-                 : <WeatherResult city={city} time={time} temp={temp} sun={sun} err={err} remove={handleRemoveItem}/>
+                : <WeatherResult city={city} time={time} temp={temp} sun={sun} err={err} remove={handleRemoveItem}/>
             }
+            {!temp && <WeatherForm value={value} change={handleInputChange} submit={handleCitySubmit} />}
+
+
         </div>
+
+
+
+
     )
 }
 

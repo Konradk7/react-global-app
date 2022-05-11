@@ -1,6 +1,10 @@
 
 .main {
-  background: $color-main-background-side;
+  //background: $color-main-background-side;
+  background-image: url("../../images/weather.jpg");
+  background-position: center;
+  background-size: contain;
+  //background-repeat: no-repeat;
   height: calc(100vh - 99px);
   overflow: auto;
   .main-container {
@@ -8,6 +12,7 @@
     margin: 0 auto;
     box-shadow: 0 0 10px 0 black;
     background: $color-main-background;
-    height: calc(100vh - 99px);
+    height: auto;
+    min-height: calc(100vh - 110px);
   }
 }
