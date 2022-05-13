@@ -3,7 +3,7 @@
   display: flex;
   width: toRem(250);
   flex-direction: column-reverse;
-  //transform: scale(0.95);
+  transform: scale(0.95);
 
   &:hover {
     cursor: pointer;
@@ -30,7 +30,7 @@
     background-size: cover;
     background-position: center;
     width: toRem(204);
-    box-shadow: 0 0 toRem(5) 0 black;
+    box-shadow: 0 0 toRem(3) 0 black;
     padding: toRem(20);
     margin-top: toRem(10);
     border: toRem(3) solid black;
@@ -39,64 +39,75 @@
     &__title {
       color: white;
       font-weight: bolder;
-      font-size: toRem(20);
-      border-bottom: toRem(3) solid black;
+      font-size: toRem(17);
       margin-bottom: toRem(10);
       padding-bottom: toRem(10);
       font-family: "Abyssinica SIL";
+      text-align: center;
+      text-shadow: 0 0 toRem(15) black;
 
     }
 
     &__text {
-      font-weight: bold;
       font-size: toRem(17);
       background-image: $color-weather-container;
-      border: toRem(3) solid black;
-      box-shadow: 0 0 toRem(1) 0 black;
-      margin: toRem(10) 0;
+      border-bottom: toRem(3) solid black;
+      border-top: toRem(3) solid black;
+      font-family: "Roboto Thin";
       padding: toRem(5);
-      border-radius: toRem(20);
-      opacity: 95%;
-      color: black;
+      opacity: 90%;
+      text-align: center;
+      transform: scaleX(1.2);
+
+
+      &-footer{
+        margin: toRem(12);
+        font-size: toRem(13);
+      }
+      &-main{
+        border-top: toRem(3) solid gray;
+        border-bottom: toRem(3) solid gray;
+
+        margin: toRem(5);
+        padding: toRem(15) 0;
+
+      }
     }
 
+
     &__footer {
-      font-size: toRem(20);
-      background: rgba(112, 255, 129, 0.65);
-      //font-weight: normal;
-      opacity: 90%;
-      border-radius: toRem(20);
-      padding: toRem(5);
+      font-size: toRem(10);
+      opacity: 50%;
+      text-align: end;
+      margin-top: toRem(10);
+
     }
 
     &__list {
-      background: $color-weather-container;
-      border: toRem(4) solid black;
-      box-shadow: 0 0 toRem(5) 0 black;
-      margin: toRem(15) 0;
+      margin: toRem(5);
 
 
       &-element {
         list-style: none;
         font-weight: bolder;
-        font-size: toRem(25);
-        border-bottom: toRem(3) solid black;
-        width: toRem(120);
+        font-size: toRem(28);
+        //border-bottom: toRem(3) solid black;
+        width: toRem(95);
         display: flex;
         justify-content: center;
-        font-family: "Roboto Thin";
+        //font-family: "Roboto Thin";
+        margin-bottom: toRem(10);
 
         &:first-child {
-          color: white;
+          color: #1a1a1a;
         }
 
         &:nth-child(2) {
-          color: red;
+          color: #ff0000;
         }
 
         &:last-child {
-          border: none;
-          color: gold;
+          color: #ffff1a;
         }
 
 
@@ -114,7 +125,7 @@
 
 
     &::placeholder {
-      padding: toRem(56);
+      padding: toRem(90);
       color: white;
       opacity: 60%;
       font-weight: bolder;
@@ -127,11 +138,12 @@
     border: toRem(3) solid $color-weather-form-border;
     border-radius: 0 0 toRem(12) toRem(12);
     color: $color-weather-head;
-    background-image: $color-weather-form-input;
+    background: $color-weather-form-input;
     cursor: pointer;
 
     &:hover {
-      background-image: $color-weather-form-input;
+     //font-size: 15px;
+      color: lighten(black, 35%);
 
     }
   }
