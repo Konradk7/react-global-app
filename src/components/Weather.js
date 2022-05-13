@@ -17,6 +17,7 @@ function Weather(props) {
         e.preventDefault();
         setShowInputs(!showInputs);
         setValue('');
+        setErr(false);
     }
 
     const handleInputChange = (e) => {

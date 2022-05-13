@@ -1,7 +1,6 @@
 
 .weather-container {
-  min-width: toRem(189);
-  max-width: toRem(189);
+  width: toRem(189);
   min-height: toRem(145);
 
 
@@ -13,35 +12,25 @@
 
 
   &__head {
-    font-size: toRem(28);
-    color: $color-weather-head;
-    font-family: "Rasa SemiBold";
-    min-height: 3.5vh;
-    max-height: 3.5vh;
-    width: toRem(100);
-    line-height: toRem(22);
-    padding: toRem(5) 0;
     display: flex;
     justify-content: space-between;
 
+    &-title {
 
-    //p {
-    //  max-width: 80%;
-    //  text-overflow-mode: ellipsis;
-    //
-    //}
+      font-size: toRem(33);
+      color: $color-weather-head;
+      font-family: "Rasa SemiBold";
+      min-height: toRem(30);
+      width: 100%;
+      padding: toRem(5) toRem(21.5) toRem(20) 0;
+      border-right: toRem(3) solid black;
+    }
 
-  &-remove {
-
-
-    &-btn {
+    &-remove-btn {
       font-size: toRem(35);
       color: lighten($color-error-message, 90%);
-      margin: 0 toRem(10.5);
-      min-height: toRem(20);
+      padding: toRem(12);
 
-      border-left: toRem(3) solid black;
-      padding-left: toRem(19);
       &:hover {
         transition: 0.4s;
         color: $color-error-message;
@@ -50,11 +39,10 @@
       }
     }
   }
-  }
 
   &__body {
     font-family: "Bitstream Charter";
-    font-size: toRem(20);
+    font-size: toRem(24);
     color: $color-weather-body;
 
     &-spin {
@@ -74,7 +62,7 @@
     justify-content: space-between;
     align-items: center;
     //position: relative;
-    .weather-border{
+    .weather-border {
       border-left: toRem(3) solid black;
     }
 

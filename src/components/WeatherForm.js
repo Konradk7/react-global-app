@@ -37,11 +37,17 @@ function WeatherForm({value, change, submit, inputs, inputsValue}) {
                 value={value}
                 onChange={change}
                 placeholder="Write city"
-                className={`weather-form__input-text ${!inputsValue ? "weather-form__input-hide" : ""}`}
+                className={`weather-form__input-text 
+                ${!inputsValue 
+                    ? "weather-form__input-hide" 
+                    : ""}`}
             />
             <input
                 type="submit"
-                className={`weather-form__input-submit ${!inputsValue ? "weather-form__input-hide" : ""}`}
+                className={`weather-form__input-submit 
+                ${!inputsValue 
+                    ? "weather-form__input-hide" 
+                    : ""}`}
             />
 
                 <button

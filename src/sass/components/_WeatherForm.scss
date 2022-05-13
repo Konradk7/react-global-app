@@ -2,9 +2,9 @@
 .weather-app {
   padding: 0 toRem(10);
   display: flex;
-  width: toRem(250);
+  //width: 100%;
   flex-direction: column-reverse;
-  transform: scale(0.95);
+
 
   &:hover {
     cursor: pointer;
@@ -38,7 +38,6 @@
     @extend %border;
     border-bottom: none;
     border-radius: toRem(8) toRem(8) 0 0;
-
     &__title {
       color: white;
       font-weight: bolder;
@@ -54,14 +53,12 @@
     &__text {
       font-size: toRem(17);
       background-image: $color-weather-container;
-      border-bottom: toRem(3) solid black;
-      border-top: toRem(3) solid black;
+      @extend %border;
       font-family: "Roboto Thin";
-      padding: toRem(5);
       opacity: 90%;
       text-align: center;
-      transform: scaleX(1.2);
-
+      transform: scaleX(1.23);
+      z-index: 0;
 
       &-footer {
         margin: toRem(12);
@@ -119,12 +116,11 @@
     flex-direction: column;
     @extend %border;
     @extend %form-btns-radius;
-
+    width: toRem(244);
     &-handle-btn {
       padding: toRem(5) 0;
       background: $color-weather-form-input;
       border: none;
-      border-top: 3px solid black;
       @extend %form-btns-radius;
       display: flex;
       justify-content: center;
@@ -151,11 +147,13 @@
     }
 
     &-submit {
-      width: 100%;
+      //width: 100%;
       font-weight: bolder;
       color: $color-weather-head;
       border: transparent;
-      border-top: 3px solid black;
+      border-top: toRem(3) solid black;
+      border-bottom: toRem(3) solid black;
+
       background: $color-weather-form-input;
       cursor: pointer;
       outline: none;

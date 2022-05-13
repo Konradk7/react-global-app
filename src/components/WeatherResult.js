@@ -7,6 +7,7 @@ import hot from '../images/hot.png';
 import cold from '../images/cold.png';
 import trash from "../images/trash.png";
 
+
 function WeatherResult({city, time, temp, sun, remove}) {
     if (city.length === 0) return null
 
@@ -17,15 +18,18 @@ function WeatherResult({city, time, temp, sun, remove}) {
             {temp ?
                 <div className="weather-container">
 
-                    <h3 className="weather-container__head">{city}
-                        <p className="weather-container__head-remove" ><span className="weather-container__head-remove-btn" onClick={remove}>X</span></p>
-                    </h3>
+                    <div className="weather-container__head">
+                        <h3 className="weather-container__head-title">{city}</h3>
 
+                        <span className="weather-container__head-remove-btn" onClick={remove}>X</span>
+                    </div>
                     <h3 className="weather-container__body">
                         {time}
                         {time < sunsetTime
-                            ? <p className="weather-border"><img className="weather-container__body-spin" src={day} alt="Day"/></p>
-                            : <p className="weather-border"><img className="weather-container__body-fog" src={night} alt="Night"/></p>
+                            ? <p className="weather-border"><img className="weather-container__body-spin" src={day}
+                                                                 alt="Day"/></p>
+                            : <p className="weather-border"><img className="weather-container__body-fog" src={night}
+                                                                 alt="Night"/></p>
                         }
                     </h3>
                     {!temp
