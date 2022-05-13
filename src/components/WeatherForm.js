@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 
-function WeatherForm({value, change, submit}) {
-    const [showInputs, setShowInputs] = useState(false);
-    function handleShowInputs() {
-        setShowInputs(true)
-    }
+function WeatherForm({value, change, submit, inputs, inputsValue}) {
+    //
+    // if(!showInputs) {
+    //
+    // }
     return (
 
         <form onSubmit={submit} className="weather-form">
@@ -31,20 +31,24 @@ function WeatherForm({value, change, submit}) {
 
             </div>
             <div className="weather-form__input">
-                <button onClick={handleShowInputs}>
-                    >>
-                </button>
+
             <input
                 type="text"
                 value={value}
                 onChange={change}
                 placeholder="Write city"
-                className="weather-form__input-text"
+                className={`weather-form__input-text ${!inputsValue ? "weather-form__input-hide" : ""}`}
             />
             <input
                 type="submit"
-                className="weather-form__input-submit"
+                className={`weather-form__input-submit ${!inputsValue ? "weather-form__input-hide" : ""}`}
             />
+
+                <button
+                    className="weather-form__input-handle-btn"
+                    onClick={inputs}>
+                    <div>>></div>
+                </button>
             </div>
         </form>
     );

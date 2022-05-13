@@ -24,6 +24,9 @@ $color-weather-form-input: linear-gradient(135deg, #F2445A 0%,#FD593F 50%);
 %border {
   border: toRem(3) solid $color-weather-form-border;
 }
+%form-btns-radius {
+  border-radius: 0 0 toRem(30) toRem(30);
+}
 
 @keyframes loading {
   0% {

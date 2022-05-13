@@ -9,9 +9,15 @@ function Weather(props) {
     const [time, setTime] = useState('');
     const [city, setCity] = useState('');
     const [temp, setTemp] = useState('');
-    const [err, setErr] = useState(false);
     const [sun, setSun] = useState('');
+    const [showInputs, setShowInputs] = useState(false);
+    const [err, setErr] = useState(false);
 
+    function handleShowInputs(e) {
+        e.preventDefault();
+        setShowInputs(!showInputs);
+        setValue('');
+    }
 
     const handleInputChange = (e) => {
         setValue(e.target.value);
@@ -21,6 +27,7 @@ function Weather(props) {
         e.preventDefault()
         setCity("")
         setTemp(false)
+        setShowInputs(false)
     }
 
     const handleCitySubmit = (e) => {
@@ -75,7 +82,7 @@ function Weather(props) {
             {err ? <h3 className="weather-app__error-message">I don't know this city!</h3>
                 : <WeatherResult city={city} time={time} temp={temp} sun={sun} err={err} remove={handleRemoveItem}/>
             }
-            {!temp && <WeatherForm value={value} change={handleInputChange} submit={handleCitySubmit} />}
+            {!temp && <WeatherForm value={value} change={handleInputChange} submit={handleCitySubmit} inputs={handleShowInputs} inputsValue={showInputs}/>}
 
 
         </div>
