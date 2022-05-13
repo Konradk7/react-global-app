@@ -1,3 +1,4 @@
+
 .weather-app {
   padding: 0 toRem(10);
   display: flex;
@@ -33,7 +34,7 @@
     box-shadow: 0 0 toRem(3) 0 black;
     padding: toRem(20);
     margin-top: toRem(10);
-    border: toRem(3) solid black;
+    @extend %border;
     border-radius: toRem(8) toRem(8) 0 0;
 
     &__title {
@@ -114,16 +115,19 @@
       }
     }
   }
-
-  &__input-text {
-
+  &__input{
+   ////visibility: hidden;
+   //height: 15px;
+   // overflow: hidden;
+   // &:hover{
+   //   overflow: visible;
+   // }
+  &-text {
+    text-align: center;
     background-image: $color-weather-form-input;
     width: toRem(240);
-    display: flex;
-    align-items: center;
     border: toRem(3) solid $color-weather-form-border;
-
-
+    outline: none;
     &::placeholder {
       padding: toRem(90);
       color: white;
@@ -132,7 +136,7 @@
     }
   }
 
-  &__input-submit {
+  &-submit {
     width: 100%;
     font-weight: bolder;
     border: toRem(3) solid $color-weather-form-border;
@@ -147,4 +151,5 @@
 
     }
   }
+}
 }

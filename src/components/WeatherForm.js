@@ -1,6 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 function WeatherForm({value, change, submit}) {
+    const [showInputs, setShowInputs] = useState(false);
+    function handleShowInputs() {
+        setShowInputs(true)
+    }
     return (
 
         <form onSubmit={submit} className="weather-form">
@@ -8,7 +12,7 @@ function WeatherForm({value, change, submit}) {
                 <h2 className="weather-form-container__title"> Add Your weather-widget to Home for make Your live more
                     easier!</h2>
 
-                <p className="weather-form-container__text">
+                <div className="weather-form-container__text">
                     <ul className="weather-form-container__list">
                         <li className="weather-form-container__list-element">Hour</li>
                         <li className="weather-form-container__list-element">Temperature</li>
@@ -21,11 +25,15 @@ function WeatherForm({value, change, submit}) {
                     </p>
                     <p className="weather-form-container__text-footer"> Just write city which you are interesting for below.</p>
 
-                </p>
+                </div>
 
                 <p className="weather-form-container__footer">Made by KK </p>
 
             </div>
+            <div className="weather-form__input">
+                <button onClick={handleShowInputs}>
+                    >>
+                </button>
             <input
                 type="text"
                 value={value}
@@ -35,8 +43,9 @@ function WeatherForm({value, change, submit}) {
             />
             <input
                 type="submit"
-                className="weather-form__input-submit"/>
-
+                className="weather-form__input-submit"
+            />
+            </div>
         </form>
     );
 }
