@@ -7,8 +7,10 @@ function WeatherForm({value, change, submit, inputs, inputsValue}) {
     // }
     return (
 
-        <form onSubmit={submit} className="weather-form">
-            <div className="weather-form-container">
+        <form onSubmit={submit}
+              className="weather-form">
+            <div className="weather-form-container"
+                 onClick={inputs}>
                 <h2 className="weather-form-container__title"> Add Your weather-widget to Home for make Your live more
                     easier!</h2>
 
@@ -52,7 +54,7 @@ function WeatherForm({value, change, submit, inputs, inputsValue}) {
 
                 <button
                     className="weather-form__input-handle-btn"
-                    onClick={inputs}>
+                        onClick={inputs}>
                     <div>>></div>
                 </button>
             </div>

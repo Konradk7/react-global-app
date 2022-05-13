@@ -1,14 +1,10 @@
 
 .weather-app {
-  padding: 0 toRem(10);
+  padding: toRem(10);
   display: flex;
-  //width: 100%;
+  width: toRem(250);
   flex-direction: column-reverse;
 
-
-  &:hover {
-    cursor: pointer;
-  }
 
   &__error-message {
     border: toRem(3) solid black;
@@ -26,6 +22,13 @@
 
 .weather-form {
 
+  &:hover {
+    transform: scale(1.015);
+    box-shadow: 0 0 toRem(30) 0 $color-slide-boxs-shadow;
+    border-radius: toRem(30);
+    cursor: pointer;
+    background: $color-slide-boxs-shadow;
+  }
   &-container {
     background-image: url("../../images/weather.jpg");
     background-repeat: no-repeat;
@@ -38,6 +41,7 @@
     @extend %border;
     border-bottom: none;
     border-radius: toRem(8) toRem(8) 0 0;
+
     &__title {
       color: white;
       font-weight: bolder;
@@ -58,7 +62,6 @@
       opacity: 90%;
       text-align: center;
       transform: scaleX(1.23);
-      z-index: 0;
 
       &-footer {
         margin: toRem(12);
@@ -117,6 +120,7 @@
     @extend %border;
     @extend %form-btns-radius;
     width: toRem(244);
+
     &-handle-btn {
       padding: toRem(5) 0;
       background: $color-weather-form-input;

@@ -14,7 +14,7 @@ function WeatherResult({city, time, temp, sun, remove}) {
     const sunsetTime = new Date(sun * 1000).toLocaleTimeString()
 
     return (
-        <div>
+        <div className="weather-result">
             {temp ?
                 <div className="weather-container">
 

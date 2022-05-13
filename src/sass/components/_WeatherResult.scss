@@ -1,9 +1,11 @@
+.weather-result {
+  padding: toRem(20) toRem(10);
+  cursor: default;
+}
 
 .weather-container {
   width: toRem(189);
   min-height: toRem(145);
-
-
   background-image: $color-weather-result-container;
   border: toRem(6) solid $color-border-app-boxes;
   padding: toRem(12) toRem(9);
@@ -34,7 +36,7 @@
       &:hover {
         transition: 0.4s;
         color: $color-error-message;
-
+        cursor: pointer;
 
       }
     }
@@ -61,14 +63,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    //position: relative;
+
     .weather-border {
       border-left: toRem(3) solid black;
     }
 
     img {
       height: toRem(45);
-      //position: relative;
       padding: toRem(2);
 
     }
