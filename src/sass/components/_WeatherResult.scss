@@ -4,7 +4,9 @@
 }
 
 .weather-container {
-  width: toRem(189);
+  //max-width: toRem(219);
+  //min-width: toRem(169);
+
   min-height: toRem(145);
   background-image: $color-weather-result-container;
   border: toRem(6) solid $color-border-app-boxes;
@@ -19,13 +21,15 @@
 
     &-title {
 
-      font-size: toRem(33);
+
       color: $color-weather-head;
       font-family: "Rasa SemiBold";
-      min-height: toRem(30);
-      width: 100%;
+      min-height: toRem(37);
+      min-width: toRem(126);
       padding: toRem(5) toRem(21.5) toRem(20) 0;
       border-right: toRem(3) solid black;
+      font-size: toRem(31);
+      text-shadow: 0 0 toRem(2) black;
     }
 
     &-remove-btn {
@@ -66,6 +70,7 @@
 
     .weather-border {
       border-left: toRem(3) solid black;
+      height: toRem(50);
     }
 
     img {

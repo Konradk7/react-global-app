@@ -4,6 +4,7 @@
 @import "variables";
 @import "typing/typing";
 @import "common/colors";
+@import "common/_reset.css";
 
 
 @import "components/Header";
@@ -11,7 +12,4 @@
 @import "components/Register";
 @import "components/WeatherResult";
 @import "components/WeatherForm";
-@import "common/_reset.css";
-* {
-  margin: 0;
-}
+@import "components/MyApps";

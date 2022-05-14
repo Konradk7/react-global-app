@@ -3,7 +3,7 @@ import Weather from "./Weather";
 
 function MyApps(props) {
     return (
-        <div>
+        <div className="apps-container">
             <Weather/>
         </div>
     );
