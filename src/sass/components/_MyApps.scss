@@ -22,11 +22,23 @@
     padding: toRem(50);
     width: 100%;
     border-radius: toRem(5);
-    background: $color-header-navBar_elements-hover;
-    //opacity: 50%;
-    :hover {
-      z-index: 1;
-      //opacity: 100%;
-    }
+    background: $color-slider-background;
+    position: relative;
+
+
+    //&::before{
+    //  content: '';
+    //  position: absolute;
+    //  right: toRem(1);
+    //  bottom: toRem(1);
+    //  padding: toRem(0) toRem(465) toRem(655) toRem(1000);
+    //  z-index: 10;
+    //  background: rgba(200, 200, 200, 0.3);
+    //
+    //  &::before:hover {
+    //    display: none;
+    //  }
+    //}
+
   }
 }
