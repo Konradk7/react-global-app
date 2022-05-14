@@ -28,6 +28,7 @@
     border-radius: toRem(30);
     cursor: pointer;
     background: $color-slide-boxs-shadow;
+
   }
   &-container {
     background-image: url("../../images/weather.jpg");
@@ -62,6 +63,11 @@
       opacity: 90%;
       text-align: center;
       transform: scaleX(1.23);
+      transition: 1s;
+      &:hover{
+        opacity: 100%;
+
+      }
 
       &-footer {
         margin: toRem(12);

@@ -1,3 +1,32 @@
 .apps-container {
-  border: 3px solid black;
+  display: flex;
+  align-items: center;
+
+  &__btn{
+    opacity: 40%;
+   &:hover {
+     cursor: pointer;
+
+   }
+    &:first-child{
+      transform: rotate(90deg);
+
+    }
+    &:last-child{
+      transform: rotate(270deg);
+    }
+  }
+  &__slider {
+    margin-top: toRem(50);
+    @extend %border;
+    padding: toRem(50);
+    width: 100%;
+    border-radius: toRem(5);
+    background: $color-header-navBar_elements-hover;
+    //opacity: 50%;
+    :hover {
+      z-index: 1;
+      //opacity: 100%;
+    }
+  }
 }
