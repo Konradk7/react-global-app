@@ -14,6 +14,7 @@
     flex-direction: column;
     text-align: center;
     @extend %form-btns-radius;
+    cursor: pointer;
 
     &-input {
       background: $color-crypto-inputs;
@@ -40,6 +41,7 @@
         height: toRem(30);
       }
     }
+
     &-container {
       background-image: url("../../images/crypto.jpg");
       background-repeat: no-repeat;
@@ -48,13 +50,67 @@
 
 
       &__title {
-        font-size: toRem(25);
+        font-size: toRem(23);
         padding: toRem(15);
         color: white;
         text-shadow: 0 0 toRem(15) black;
+        font-weight: bolder;
+      }
+
+      &__text {
+        background: $color-crypto-text-background;
+        color: white;
+        opacity: 80%;
+        transition: 1.5s;
+        padding: toRem(10);
+        font-size: toRem(20);
+
+        &:hover {
+          opacity: 100%;
+          margin: 0 toRem(20);
+          @extend %border;
+          padding-left: 0;
+          padding-right: 0;
+
+        }
 
 
+        &-list {
+          display: flex;
+          justify-content: space-between;
+          margin: toRem(20) toRem(10);
+          font-size: toRem(20);
 
+          &-element {
+            &:first-child {
+              border-left: none;
+              color: goldenrod;
+            }
+
+            &:nth-child(2) {
+              color: green;
+            }
+
+            &:last-child {
+              color: orangered;
+            }
+
+          }
+
+        }
+
+        &-main {
+          border-bottom: toRem(3) solid rgba(194, 194, 214, 0.3);
+          border-top: toRem(3) solid rgba(194, 194, 214, 0.3);
+          padding: toRem(15);
+          margin: toRem(10);
+          color: black;
+        }
+      }
+      &__footer {
+        margin: toRem(10);
+        text-align: end;
+        color: lighten(black, 40%);
       }
     }
   }

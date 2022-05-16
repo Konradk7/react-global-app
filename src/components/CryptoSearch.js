@@ -14,10 +14,10 @@ function CryptoSearch({search, change, submit}) {
                         easier!</h2>
 
                     <div className="crypto-search__form-container__text">
-                        <ul className="crypto-search__form-container__list">
-                            <li className="crypto-search__form-container__list-element">Crypto</li>
-                            <li className="crypto-search__form-container__list-element">Price</li>
-                            <li className="crypto-search__form-container__list-element">Icons</li>
+                        <ul className="crypto-search__form-container__text-list">
+                            <li className="crypto-search__form-container__text-list-element">Crypto</li>
+                            <li className="crypto-search__form-container__text-list-element">Price</li>
+                            <li className="crypto-search__form-container__text-list-element">Icons</li>
                         </ul>
                         <p className="crypto-search__form-container__text-main">
                             Even more! Your widget will show You every information's by
