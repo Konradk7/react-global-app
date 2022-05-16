@@ -13,21 +13,40 @@ import {
 function App(props) {
     return (
         <Router>
-            <Header />
-           <div className="main"> 
-               <div className="main-container">
-                   <Routes>
-                       <Route path='/' element={<Home/>} />
-                       <Route path='/my-apps' element={<MyApps/>} />
-                       {/*<Route path='/contact' element={<Contact/>} />*/}
-                       {/*<Route path='/login' element={<Login/>} />*/}
-                   </Routes>
-               </div>
-           </div>
+            <Header/>
+            <div className="main">
+
+                <div className="main-background">
+                    <div className="main-background__circle"></div>
+                    <div className="main-background__circle"></div>
+                    <div className="main-background__circle"></div>
+                    <div className="main-background__circle"></div>
+                    <div className="main-background__circle"></div>
+                    <div className="main-background__circle"></div>
+                    <div className="main-background__circle"></div>
+                </div>
+                <div className="main-background-2">
+                    <div className="main-background-2__circle"></div>
+                    <div className="main-background-2__circle"></div>
+                    <div className="main-background-2__circle"></div>
+                    <div className="main-background-2__circle"></div>
+                    <div className="main-background-2__circle"></div>
+                    <div className="main-background-2__circle"></div>
+                    <div className="main-background-2__circle"></div>
+                </div>
+                <div className="main-container">
+                    <Routes>
+                        <Route path='/' element={<Home/>}/>
+                        <Route path='/my-apps' element={<MyApps/>}/>
+                        {/*<Route path='/contact' element={<Contact/>} />*/}
+                        {/*<Route path='/login' element={<Login/>} />*/}
+                    </Routes>
+                </div>
+
+            </div>
         </Router>
     );
 }
-
 
 
 export default App;

@@ -1,12 +1,172 @@
 
 .main {
-  //background: $color-main-background-side;
   background: $color-weather-home;
-  //background-position: center;
-  //background-size: cover;
-  //background-repeat: no-repeat;
   height: calc(100vh - 99px);
   overflow: auto;
+
+  &-background {
+    position: relative;
+
+    &__circle {
+      position: absolute;
+      height: toRem(5);
+      width: toRem(5);
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 toRem(5) 0 white;
+      opacity: 0.1;
+
+
+      @keyframes scale-frames {
+        0% {
+          transform: scale3d(0.4, 0.4, 1);
+        }
+
+        50% {
+          transform: scale3d(2.2, 2.2, 1);
+        }
+
+        100% {
+          transform: scale3d(0.4, 0.4, 1);
+        }
+      }
+      @keyframes moveing {
+        from {
+          transform: translateY(89vh);
+        }
+
+      }
+
+      &:nth-child(0) {
+        animation: scale-frames 2s infinite, moveing 10s infinite alternate-reverse;
+
+      }
+
+      &:nth-child(1) {
+        left: 15px;
+        animation: scale-frames 2s infinite, moveing 10s infinite alternate-reverse;
+      }
+
+      &:nth-child(2) {
+        left: 30px;
+        animation: scale-frames 1s infinite, moveing 15s infinite alternate-reverse;
+
+
+      }
+
+      &:nth-child(3) {
+        left: 45px;
+        animation: scale-frames 3s infinite, moveing 20s infinite alternate-reverse;
+
+      }
+
+      &:nth-child(4) {
+        left: 60px;
+        animation: scale-frames 2.5s infinite, moveing 17s infinite alternate-reverse;
+
+      }
+
+      &:nth-child(5) {
+        left: 75px;
+        animation: scale-frames 1.5s infinite, moveing 12s infinite alternate-reverse;
+
+      }
+
+      &:nth-child(6) {
+        left: 90px;
+        animation: scale-frames 3s infinite, moveing 15s infinite alternate-reverse;
+
+      }
+
+      &:nth-child(7) {
+        left: 105px;
+        animation: scale-frames 1.5s infinite, moveing 20s infinite alternate-reverse;
+
+      }
+    }
+  }
+  &-background-2 {
+    position: relative;
+
+    &__circle {
+      position: absolute;
+      height: toRem(5);
+      width: toRem(5);
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 toRem(5) 0 white;
+      opacity: 0.1;
+
+
+      @keyframes scale-frames {
+        0% {
+          transform: scale3d(0.4, 0.4, 1);
+        }
+
+        50% {
+          transform: scale3d(2.2, 2.2, 1);
+        }
+
+        100% {
+          transform: scale3d(0.4, 0.4, 1);
+        }
+      }
+      @keyframes moveing {
+        from {
+          transform: translateY(89vh);
+        }
+
+      }
+
+      &:nth-child(0) {
+        animation: scale-frames 2s infinite, moveing 10s infinite alternate-reverse;
+
+      }
+
+      &:nth-child(1) {
+        left: 1735px;
+        animation: scale-frames 2s infinite, moveing 10s infinite alternate-reverse;
+      }
+
+      &:nth-child(2) {
+        left: 1780px;
+        animation: scale-frames 1s infinite, moveing 15s infinite alternate-reverse;
+
+
+      }
+
+      &:nth-child(3) {
+        left: 1750px;
+        animation: scale-frames 3s infinite, moveing 20s infinite alternate-reverse;
+
+      }
+
+      &:nth-child(4) {
+        left: 1765px;
+        animation: scale-frames 2.5s infinite, moveing 17s infinite alternate-reverse;
+
+      }
+
+      &:nth-child(5) {
+        left: 1795px;
+        animation: scale-frames 1.5s infinite, moveing 12s infinite alternate-reverse;
+
+      }
+
+      &:nth-child(6) {
+        left: 1810px;
+        animation: scale-frames 3s infinite, moveing 15s infinite alternate-reverse;
+
+      }
+
+      &:nth-child(7) {
+        left: 1825px;
+        animation: scale-frames 1.5s infinite, moveing 20s infinite alternate-reverse;
+
+      }
+    }
+  }
+
   .main-container {
     max-width: 1600px;
     margin: 0 auto;
@@ -17,4 +177,5 @@
 
   }
 }
+
 
