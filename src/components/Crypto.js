@@ -14,7 +14,7 @@ function Crypto(props) {
     function handleShowInputs(e) {
         e.preventDefault();
         setShowInputs(!showInputs);
-        setCoin('');
+        setSearch('');
         setErr(false);
     }
     const handleRemoveItem = (e) => {
@@ -61,8 +61,11 @@ function Crypto(props) {
     //
     return (
         <div className="crypto-app">
-            <CryptoResult name={coin} icon={coinIcon} symbol={symbolCoin} price={price} err={err}/>
-            <CryptoSearch search={search} change={handleInputSearch} submit={handleCryptoSubmit} inputsValue={showInputs} inputs={handleShowInputs}/>
+            {err
+                ? <h3 className="crypto-app__error-message">I don't know this coin!</h3>
+                : <CryptoResult name={coin} icon={coinIcon} symbol={symbolCoin} price={price} err={err}/>
+            }
+            {!coin && <CryptoSearch search={search} change={handleInputSearch} submit={handleCryptoSubmit} inputsValue={showInputs} inputs={handleShowInputs}/>}
         </div>
     );
 }

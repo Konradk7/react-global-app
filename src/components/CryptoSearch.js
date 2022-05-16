@@ -7,9 +7,11 @@ function CryptoSearch({search, change, submit, inputs, inputsValue}) {
             <form
                 onSubmit={submit}
                 className="crypto-search__form"
+
             >
                 <div className="crypto-search__form-container"
-                    >
+                     onClick={inputs}
+                >
                     <h2 className="crypto-search__form-container__title"> Add Your Crypto-Widget to Home for make Your live more
                         easier!</h2>
 
