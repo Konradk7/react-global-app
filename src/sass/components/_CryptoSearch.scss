@@ -2,7 +2,9 @@
   width: toRem(250);
   height: toRem(650);
   padding: toRem(20);
-
+  &:hover {
+    transform: scale(1.01);
+  }
 }
 
 .crypto-search {
@@ -15,6 +17,7 @@
     text-align: center;
     @extend %form-btns-radius;
     cursor: pointer;
+    box-shadow: 0 0 toRem(10) 0 black;
 
     &-input {
       background: $color-crypto-inputs;
@@ -35,7 +38,7 @@
     &-toggle {
       background: $color-crypto-inputs;
       border: none;
-      @extend %form-btns-radius;
+      border-radius: 0 0 toRem(26) toRem(26);
 
       &__arrow {
         height: toRem(30);
@@ -67,10 +70,8 @@
 
         &:hover {
           opacity: 100%;
-          margin: 0 toRem(20);
-          @extend %border;
-          padding-left: 0;
-          padding-right: 0;
+          border-bottom: toRem(3) solid black;
+          border-top: toRem(3) solid black;
 
         }
 
@@ -106,11 +107,15 @@
           margin: toRem(10);
           color: black;
         }
+        &-footer {
+          font-size: toRem(14);
+        }
       }
       &__footer {
         margin: toRem(10);
         text-align: end;
         color: lighten(black, 40%);
+        font-size: toRem(12);
       }
     }
   }
