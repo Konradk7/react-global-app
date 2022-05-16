@@ -37,12 +37,12 @@ function Weather(props) {
 
         if (value.length !== 0) return (
             fetch(APIUrl)//async/await
-            .then(response => {
-                if (response.ok) {
-                    return response
-                }
-                throw Error("Nie udało się")
-            })
+                .then(response => {
+                    if (response.ok) {
+                        return response
+                    }
+                    throw Error("Nie udało się")
+                })
                 .then(response => response.json())
                 .then(data => {
 
@@ -59,7 +59,7 @@ function Weather(props) {
 
                 }))
 
-        }
+    }
 
 
     useEffect(() => {
@@ -83,12 +83,9 @@ function Weather(props) {
             {err ? <h3 className="weather-app__error-message">I don't know this city!</h3>
                 : <WeatherResult city={city} time={time} temp={temp} sun={sun} err={err} remove={handleRemoveItem}/>
             }
-            {!temp && <WeatherForm value={value} change={handleInputChange} submit={handleCitySubmit} inputs={handleShowInputs} inputsValue={showInputs}/>}
-
-
+            {!temp && <WeatherForm value={value} change={handleInputChange} submit={handleCitySubmit}
+                                   inputs={handleShowInputs} inputsValue={showInputs}/>}
         </div>
-
-
 
 
     )

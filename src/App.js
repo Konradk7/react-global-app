@@ -14,7 +14,7 @@ function App(props) {
     return (
         <Router>
             <Header />
-           <div className="main">
+           <div className="main"> 
                <div className="main-container">
                    <Routes>
                        <Route path='/' element={<Home/>} />
