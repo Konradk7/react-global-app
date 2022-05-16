@@ -26,6 +26,7 @@ $color-slider-background: rgba(200, 200, 200, 0.3);
 
 $color-crypto-inputs: rgb(61, 61, 92);
 $color-crypto-text-background: rgba(61, 61, 92);
+$color-crypto-result-background: linear-gradient(gray 60%, black);
 
 %border {
   border: toRem(3) solid $color-weather-form-border;

@@ -1,0 +1,33 @@
+.crypto-result {
+  width: toRem(250);
+  height: toRem(100);
+  @extend %border;
+  padding: toRem(5);
+  background: $color-crypto-result-background;
+  font-family: "DejaVu Serif";
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &__title {
+      font-size: toRem(22);
+      color: black;
+      font-weight: bolder;
+    }
+
+    img {
+      @extend %border;
+      border-radius: 50%;
+      background: black;
+      padding: toRem(2);
+    }
+    &__body {
+      color: gold;
+      font-weight: bolder;
+      font-size: toRem(20);
+    }
+  }
+}
