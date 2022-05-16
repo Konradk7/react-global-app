@@ -1,0 +1,39 @@
+.crypto-app {
+  width: toRem(250);
+  height: toRem(650);
+  padding: toRem(20);
+}
+
+.crypto-search {
+  &__form {
+    @extend %border;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @extend %form-btns-radius;
+
+    &-input {
+      background: $color-crypto-inputs;
+      border: none;
+      border-bottom: toRem(3) solid black;
+      text-align: center;
+      font-size: toRem(20);
+      color: white;
+      &:last-of-type {
+        font-weight: bolder;
+        color: $color-fonts;
+      }
+    }
+
+    &-toggle {
+      background: $color-crypto-inputs;
+      border: none;
+      @extend %form-btns-radius;
+
+      &__arrow {
+        height: toRem(30);
+      }
+    }
+  }
+}

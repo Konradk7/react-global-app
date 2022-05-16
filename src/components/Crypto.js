@@ -16,7 +16,7 @@ function Crypto(props) {
 
     const handleCryptoSubmit = (e) => {
         e.preventDefault()
-        const COINURL = `https://api.coingecko.com/api/v3/coins/${search}/history?date=1-1-2018&localization=false`;
+        const COINURL = `https://api.coingecko.com/api/v3/coins/${search}/history?date=15-5-2022&localization=false`;
 
         fetch(COINURL)
             .then(response => {
@@ -30,7 +30,7 @@ function Crypto(props) {
                 setCoin(r.name)
                 setCoinIcon(r.image.small)
                 setSymbolCoin(r.symbol)
-                setPrice(r.market_data.current_price.pln)
+                setPrice(r.market_data.current_price.usd)
                 setErr(false);
             })
             .catch(err => {
@@ -38,10 +38,18 @@ function Crypto(props) {
                 setErr(true);
             })
     }
+    // useEffect(() => {
+    //     const intervalId = setInterval(() => {
+    //         if (coin.length === 0) return;
+    //         setPrice(price)
+    //     }, 1000)
+    //     return clearInterval(intervalId);
+    // },[price])
+    //
     return (
         <div className="crypto-app">
-            <CryptoSearch search={search} change={handleInputSearch} submit={handleCryptoSubmit} />
             <CryptoResult name={coin} icon={coinIcon} symbol={symbolCoin} price={price} err={err}/>
+            <CryptoSearch search={search} change={handleInputSearch} submit={handleCryptoSubmit}/>
         </div>
     );
 }
