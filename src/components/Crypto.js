@@ -7,9 +7,22 @@ function Crypto(props) {
     const [search, setSearch] = useState('');
     const [coinIcon, setCoinIcon] = useState('');
     const [symbolCoin, setSymbolCoin] = useState('');
-    const [price, setPrice] = useState('');
+    const [price, setPrice] = useState(false);
     const [err, setErr] = useState(false);
+    const [showInputs, setShowInputs] = useState(false);
 
+    function handleShowInputs(e) {
+        e.preventDefault();
+        setShowInputs(!showInputs);
+        setCoin('');
+        setErr(false);
+    }
+    const handleRemoveItem = (e) => {
+        e.preventDefault()
+        setCoin("")
+        setPrice(false)
+        setShowInputs(false)
+    }
     const handleInputSearch = (e) => {
         setSearch(e.target.value);
     }
@@ -49,7 +62,7 @@ function Crypto(props) {
     return (
         <div className="crypto-app">
             <CryptoResult name={coin} icon={coinIcon} symbol={symbolCoin} price={price} err={err}/>
-            <CryptoSearch search={search} change={handleInputSearch} submit={handleCryptoSubmit}/>
+            <CryptoSearch search={search} change={handleInputSearch} submit={handleCryptoSubmit} inputsValue={showInputs} inputs={handleShowInputs}/>
         </div>
     );
 }

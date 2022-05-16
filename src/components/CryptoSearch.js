@@ -1,7 +1,7 @@
 import React from 'react';
 import arrow from "../images/arrow.png";
 
-function CryptoSearch({search, change, submit}) {
+function CryptoSearch({search, change, submit, inputs, inputsValue}) {
     return (
         <div className="crypto-search">
             <form
@@ -36,13 +36,24 @@ function CryptoSearch({search, change, submit}) {
                     placeholder="Search crypto..."
                     value={search}
                     onChange={change}
-                    className="crypto-search__form-input"
+                    className={`crypto-search__form-input
+                    ${!inputsValue
+                        ? "crypto-search__form-input__hide"
+                        : "" }
+                    `}
                 />
                 <input
                     type="submit"
-                    className="crypto-search__form-input"
+                    className={`crypto-search__form-input
+                    ${!inputsValue
+                        ? "crypto-search__form-input__hide"
+                        : "" }
+                    `}
                 />
-                <button className="crypto-search__form-toggle">
+                <button
+                    className="crypto-search__form-toggle"
+                    onClick={inputs}
+                >
                     <img
                         src={arrow}
                         alt="drop-buttons"
