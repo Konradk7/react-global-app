@@ -5,6 +5,18 @@
   padding: toRem(5);
   background: $color-crypto-result-background;
   font-family: "DejaVu Serif";
+  position: relative;
+  cursor: pointer;
+
+  &:hover::before {
+    content: 'x';
+    position: absolute;
+    font-size: toRem(150);
+    color: $color-error-message;
+    bottom: 1px;
+    left: 90px;
+    transform: scaleX(3.2);
+  }
 
   &__container {
     display: flex;
@@ -28,6 +40,7 @@
       color: gold;
       font-weight: bolder;
       font-size: toRem(20);
+
     }
   }
 }

@@ -27,6 +27,7 @@ function Crypto(props) {
         setSearch(e.target.value);
     }
 
+
     const handleCryptoSubmit = (e) => {
         e.preventDefault()
         const COINURL = `https://api.coingecko.com/api/v3/coins/${search}/history?date=15-5-2022&localization=false`;
@@ -63,7 +64,7 @@ function Crypto(props) {
         <div className="crypto-app">
             {err
                 ? <h3 className="crypto-app__error-message">I don't know this coin!</h3>
-                : <CryptoResult name={coin} icon={coinIcon} symbol={symbolCoin} price={price} err={err}/>
+                : <CryptoResult name={coin} icon={coinIcon} symbol={symbolCoin} price={price} err={err} remove={handleRemoveItem} />
             }
             {!coin && <CryptoSearch search={search} change={handleInputSearch} submit={handleCryptoSubmit} inputsValue={showInputs} inputs={handleShowInputs}/>}
         </div>
