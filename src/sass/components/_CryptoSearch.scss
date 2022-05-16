@@ -5,6 +5,18 @@
   &:hover {
     transform: scale(1.01);
   }
+  &__error-message {
+    border: toRem(3) solid black;
+    box-shadow: 0 0 toRem(5) 0 black;
+    background-color: $color-error-message;
+    cursor: default;
+    font-family: "Droid Sans";
+    padding: toRem(5) toRem(10);
+    text-align: center;
+    text-transform: uppercase;
+    margin: toRem(10) 0;
+    padding: toRem(20);
+  }
 }
 
 .crypto-search {

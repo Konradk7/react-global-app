@@ -62,11 +62,12 @@ function Crypto(props) {
     //
     return (
         <div className="crypto-app">
+
+            {!coin && <CryptoSearch search={search} change={handleInputSearch} submit={handleCryptoSubmit} inputsValue={showInputs} inputs={handleShowInputs}/>}
             {err
                 ? <h3 className="crypto-app__error-message">I don't know this coin!</h3>
                 : <CryptoResult name={coin} icon={coinIcon} symbol={symbolCoin} price={price} err={err} remove={handleRemoveItem} />
             }
-            {!coin && <CryptoSearch search={search} change={handleInputSearch} submit={handleCryptoSubmit} inputsValue={showInputs} inputs={handleShowInputs}/>}
         </div>
     );
 }
