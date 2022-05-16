@@ -2,9 +2,11 @@
   width: toRem(250);
   height: toRem(650);
   padding: toRem(20);
+
 }
 
 .crypto-search {
+
   &__form {
     @extend %border;
     width: 100%;
@@ -16,13 +18,16 @@
     &-input {
       background: $color-crypto-inputs;
       border: none;
-      border-bottom: toRem(3) solid black;
+      border-top: toRem(3) solid black;
       text-align: center;
       font-size: toRem(20);
       color: white;
+
       &:last-of-type {
         font-weight: bolder;
         color: $color-fonts;
+        border-bottom: toRem(3) solid black;
+
       }
     }
 
@@ -33,6 +38,23 @@
 
       &__arrow {
         height: toRem(30);
+      }
+    }
+    &-container {
+      background-image: url("../../images/crypto.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+
+      &__title {
+        font-size: toRem(25);
+        padding: toRem(15);
+        color: white;
+        text-shadow: 0 0 toRem(15) black;
+
+
+
       }
     }
   }

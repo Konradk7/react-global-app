@@ -8,6 +8,29 @@ function CryptoSearch({search, change, submit}) {
                 onSubmit={submit}
                 className="crypto-search__form"
             >
+                <div className="crypto-search__form-container"
+                    >
+                    <h2 className="crypto-search__form-container__title"> Add Your Crypto-Widget to Home for make Your live more
+                        easier!</h2>
+
+                    <div className="crypto-search__form-container__text">
+                        <ul className="crypto-search__form-container__list">
+                            <li className="crypto-search__form-container__list-element">Crypto</li>
+                            <li className="crypto-search__form-container__list-element">Price</li>
+                            <li className="crypto-search__form-container__list-element">Icons</li>
+                        </ul>
+                        <p className="crypto-search__form-container__text-main">
+                            Even more! Your widget will show You every information's by
+                            icons! Right now You don't need to open slowly
+                            core-app with tons of useless option's. Everything with you just through quick look!
+                        </p>
+                        <p className="crypto-search__form-container__text-footer"> Just write crypto-full-name which you are interesting for below.</p>
+
+                    </div>
+
+                    <p className="crypto-search__form-container__footer">Made by KK </p>
+
+                </div>
                 <input
                     type="text"
                     placeholder="Search crypto..."

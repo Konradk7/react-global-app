@@ -11,7 +11,7 @@ function WeatherForm({value, change, submit, inputs, inputsValue}) {
               className="weather-form">
             <div className="weather-form-container"
                  onClick={inputs}>
-                <h2 className="weather-form-container__title"> Add Your weather-widget to Home for make Your live more
+                <h2 className="weather-form-container__title"> Add Your Weather-Widget to Home for make Your live more
                     easier!</h2>
 
                 <div className="weather-form-container__text">
