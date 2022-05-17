@@ -4,14 +4,15 @@ import Register from "./Register";
 import Weather from "./Weather";
 import WeatherResult from "./WeatherResult";
 import Crypto from "./Crypto";
+import Fitness from "./Fitness";
 
 
 function Home(props) {
     return (
 
             <>
-
-                    <Crypto />
+                    <Fitness />
+                    {/*<Crypto />*/}
                     {/*<SignIn />*/}
                     {/*    <Register />*/}
                     {/*<Weather*/}
