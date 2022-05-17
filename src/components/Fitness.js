@@ -9,13 +9,17 @@ function Fitness(props) {
     const handleAddDay = () => {
         setDay(prevState => [...prevState, `Week: ${day.length + 1}`])
     }
+    const handleRemoveDay = idx => {
+        setDay(prevState => prevState.filter(day => day.value !== idx.length));
+    };
 
     return (
         <div>
             <button onClick={handleAddDay}>Add Week!</button>
-
                     {day.map((day, idx) => {
-                        return <ul key={idx}><li>{day}</li>
+                        return <ul key={idx}>
+                            <li>{day}</li>
+                            <button onClick={handleRemoveDay}>Remove Day</button>
                             <NewMeal />
                         </ul>
                     })}
