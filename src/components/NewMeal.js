@@ -15,11 +15,12 @@ function NewMeal({onNewMeal}) {
     }
 
     return (
-        <div className="fitness-title-container">
-            <input type="text" value={value} onChange={handleAddItem} placeholder="Add title..." className="fitness-title-container__input"/>
-            <button onClick={handleAddTitle} className="fitness-title-container__button"><img src={plus} alt="Add"/></button>
+
+        <div className="fitness-title__container">
+            <input type="text" value={value} onChange={handleAddItem} placeholder="Add meals..." className="fitness-title__container__input"/>
+            <button onClick={handleAddTitle} className="fitness-title__container__button"><img src={plus} alt="Add"/></button>
             {title.map((title, idx) => {
-                return <ul key={idx}>{title}<Meal /></ul>
+                return <ul key={idx} className="fitness-title__container__list">{title}<Meal /></ul>
             })}
         </div>
     );

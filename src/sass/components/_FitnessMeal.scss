@@ -1,0 +1,27 @@
+.fitness-body__container {
+  padding: toRem(10);
+
+  margin: toRem(5) toRem(5);
+
+
+  &__input {
+    width: toRem(200);
+    margin-bottom: toRem(10);
+    border-radius: toRem(15) 0 0 toRem(15);
+    height: toRem(20);
+    font-size: toRem(17);
+    border: toRem(2) solid black;
+    text-align: center;
+
+  }
+  &__btn {
+    width: toRem(50);
+    height: toRem(26);
+    border-radius: 0 toRem(15) toRem(15) 0;
+    font-size: toRem(17);
+    border: toRem(2) solid black;
+    border-left: none;
+    font-weight: bold;
+    background: darkslategrey;
+  }
+}

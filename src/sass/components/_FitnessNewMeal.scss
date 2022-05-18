@@ -1,18 +1,47 @@
-.fitness-title-container {
+.fitness-title__container {
   display: flex;
-  //overflow: auto;
-  //flex-wrap: wrap;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-around;
   &__input {
     height: toRem(20);
     width: toRem(120);
+    text-align: center;
+    @extend %border;
+    border-radius: toRem(5);
+    font-family: "DejaVu Serif";
+    margin-bottom: toRem(10);
+    box-shadow: 0 0 toRem(3) 0 black;
 
   }
+  &__list {
+    font-size: toRem(25);
+    font-family: "DejaVu Sans";
+    font-weight: bold;
+    text-shadow: toRem(2) toRem(1) #1a1a1a;
+    @extend %box-shadow;
+    color: #4d4d4d;
+    border: toRem(2) solid gray;
+    border-radius: toRem(15);
+    margin: 5px;
+  }
+
   &__button {
     height: toRem(27);
-    width: toRem(20);
+    width: toRem(40);
+    margin-right: toRem(590);
+    border: none;
+    background: transparent;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+
     img {
       height: toRem(20);
-      width: toRem(10);
+      width: toRem(20);
     }
   }
+
 }

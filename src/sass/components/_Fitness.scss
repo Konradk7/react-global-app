@@ -97,7 +97,7 @@
 
     &__head {
       background: $color-fitness-list-elements;
-      border: toRem(1.5) solid black;
+      border: toRem(2) solid black;
       padding: toRem(10);
 
 
@@ -111,7 +111,8 @@
 
       &-element {
         font-size: toRem(28);
-        color: black;
+        font-weight: bold;
+        font-family: Charmonman;
         border-bottom: toRem(1) solid darkgray;
         width: 100%;
         padding: toRem(5) 0;

@@ -9,6 +9,7 @@ function Meal(props) {
     const handleAddIngredients = e => {
         e.preventDefault();
         setIngredients(prevState => [...prevState, value]);
+        setValue('');
     }
     const handleAddValue = e => {
         setValue(e.target.value);
@@ -20,9 +21,9 @@ function Meal(props) {
     //     setWeight(weightValue);
     // }
     return (
-        <div>
-            <input type="text" value={value} onChange={handleAddValue}/>
-            <button onClick={handleAddIngredients}>Add Ingredients!</button>
+        <div className="fitness-body__container">
+            <input type="text" value={value} onChange={handleAddValue} className="fitness-body__container__input" placeholder="Add Ingredients!"/>
+            <button onClick={handleAddIngredients} className="fitness-body__container__btn">Add</button>
                 {ingredients.map((el, idx) => {
                     return <li
                         key={idx}
