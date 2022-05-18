@@ -2,7 +2,7 @@
   height: toRem(400);
   min-width: toRem(800);
   padding: toRem(20);
-  max-width: toRem(900);
+  max-width: toRem(800);
 
   &__btn {
     @extend %fitness-btn;
