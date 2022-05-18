@@ -7,7 +7,7 @@ function Fitness(props) {
 
 
     const handleAddDay = () => {
-        setDay(prevState => [...prevState, `Week: ${day.length + 1}`])
+        setDay(prevState => [...prevState, `Day: ${day.length + 1}`])
     }
     const handleRemoveDay = week => {
         setDay(prevState => prevState.filter(day => day !== week));
@@ -16,14 +16,27 @@ function Fitness(props) {
     return (
         <div className="fitness-app">
             <div className="fitness-app-container">
-            <button onClick={handleAddDay}>Add Week!</button>
-                    {day.map((day, idx) => {
-                        return <ul key={idx}>
-                            <li>{day}</li>
-                            <button onClick={handleRemoveDay}>Remove Day</button>
-                            <NewMeal />
-                        </ul>
-                    })}
+                <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                    <button
+                        onClick={handleAddDay}
+                        className="fitness-app-container__btn fitness-app__btn"
+                    >
+                        Add Day!
+                    </button>
+                    <p className="fitness-app-container__title">Let's create a plan!</p>
+                </div>
+                {day.map((day, idx) => {
+                    return <ul
+                        key={idx}
+                        className="fitness-app-container__head"
+                    >
+                        <li className="fitness-app-container__head-element">
+                            {day}
+                        </li>
+                        <button onClick={handleRemoveDay}>Remove Day</button>
+                        <NewMeal/>
+                    </ul>
+                })}
             </div>
         </div>
     );

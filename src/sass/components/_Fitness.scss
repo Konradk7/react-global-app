@@ -3,6 +3,10 @@
   width: toRem(800);
   padding: toRem(20);
 
+  &__btn {
+    @extend %fitness-btn;
+  }
+
   &-container {
     background-image: url("../../images/food.jpg");
     background-position: center;
@@ -10,11 +14,59 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    padding: toRem(20);
+    padding: toRem(20) toRem(20);
     border-radius: toRem(20);
     overflow: auto;
     @extend %box-shadow;
     @extend %border;
+
+
+    &__title {
+      background: white;
+      @extend %border;
+      @extend %box-shadow;
+      border-radius: toRem(3);
+      margin: 0 toRem(190) toRem(10) 0;
+      font-size: toRem(30);
+      font-family: "DejaVu Serif";
+      padding: toRem(2) toRem(50);
+      position: relative;
+      cursor: default;
+      transition: 3s;
+
+      &::before {
+        background-image: url("../../images/pizza.png");
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100px;
+        height: 60px;
+        right: 400px;
+        bottom: -10px;
+        content: "";
+
+
+      }
+      &:hover {
+        transform: translate3d(2rem, 0.2rem, 3rem);
+      }
+
+      &::after {
+        background-image: url("../../images/drink.png");
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100px;
+        height: 60px;
+        right: -105px;
+        bottom: -5px;
+        content: "";
+
+      }
+    }
+
     &::-webkit-scrollbar {
       background: transparent;
       width: toRem(12);
@@ -22,15 +74,38 @@
     }
 
     &::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 toRem(7) white;
+      box-shadow: inset 0 0 toRem(5) white;
       @extend %fitness-scrollbar;
     }
 
     &::-webkit-scrollbar-thumb {
       background: $color-fitness-scrollbar;
       @extend %fitness-scrollbar;
-      border: toRem(1) solid gray;
+      border: toRem(2) solid black;
     }
 
+    &__btn {
+      background: #ff8000;
+      border-radius: toRem(20) toRem(20);
+      margin-bottom: toRem(10);
+    }
+
+    &__head {
+      background: white;
+      padding: toRem(10);
+
+      &:first-of-type {
+        border-radius: 10px 10px 0 0;
+      }
+
+      &:last-of-type {
+        border-radius: 0 0 10px 10px;
+      }
+
+      &-element {
+        font-size: toRem(20);
+
+      }
+    }
   }
 }
