@@ -1,4 +1,5 @@
 import React from 'react';
+// import pizza-delivery from 'src/images/pizza-delivery.png'
 
 function FitnessForm(props) {
     return (

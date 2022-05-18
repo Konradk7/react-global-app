@@ -11,7 +11,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: toRem(20);
+    padding: toRem(20) 0;
     cursor: pointer;
     &:hover {
       transform: scale(1.015);
@@ -22,13 +22,22 @@
       color: white;
       text-shadow: toRem(1) toRem(2) black;
       font-weight: bolder;
+      margin-bottom: toRem(15);
+
     }
     &__body {
-      font-size: toRem(18);
+      font-size: toRem(15);
       line-height: toRem(20);
-      font-family: Charmonman;
-      color: black;
-      border-top: toRem(1) solid black;
+      padding: toRem(15);
+      font-family: "DejaVu Sans";
+      font-weight: bold;
+      color: white;
+      border-top: toRem(2) solid black;
+      border-bottom: toRem(2) solid black;
+      background: rgba(100, 20, 50, 0.8);
+      text-shadow: toRem(1) toRem(1) black;
+      @extend %box-shadow;
+      text-align: center;
     }
   }
 }

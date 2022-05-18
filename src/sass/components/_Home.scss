@@ -4,7 +4,6 @@
   height: calc(100vh - 99px);
   overflow: auto;
   position: relative;
-
   &-background {
     position: relative;
 
@@ -173,7 +172,7 @@
   }
 
   .main-container {
-    max-width: 1600px;
+    max-width: toRem(1600);
     margin: 0 auto;
     box-shadow: 0 0 10px 0 black;
     background: $color-main-background;
@@ -181,7 +180,18 @@
     height: 100%;
     z-index: 10;
     position: relative;
+
+
   }
 }
+.main-page {
+  display: flex;
+  justify-content: space-between;
+  //width: auto;
+  //flex-wrap: wrap;
 
+  @include mobile {
+    flex-wrap: wrap;
+  }
+}
 

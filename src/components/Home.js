@@ -11,7 +11,7 @@ function Home(props) {
     return (
 
             <>
-                <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                <div className="main-page" >
                     <Fitness />
                     <Crypto />
                     {/*<SignIn />*/}

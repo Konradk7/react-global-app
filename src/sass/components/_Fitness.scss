@@ -5,6 +5,7 @@
 
   &__btn {
     @extend %fitness-btn;
+
     &__remove {
       color: lighten($color-error-message, 10%);
       border: none;
