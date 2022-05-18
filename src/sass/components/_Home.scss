@@ -1,9 +1,11 @@
 
 .main {
   background: $color-weather-home;
-  height: calc(100vh - 99px);
+  min-height: calc(100vh - 99px);
   overflow: auto;
   position: relative;
+  height: auto;
+
   &-background {
     position: relative;
 
@@ -173,8 +175,9 @@
 
   .main-container {
     max-width: toRem(1600);
+    min-width: toRem(1200);
     margin: 0 auto;
-    box-shadow: 0 0 10px 0 black;
+    box-shadow: 0 0 toRem(10) 0 black;
     background: $color-main-background;
     //height: auto;
     height: 100%;
@@ -186,9 +189,7 @@
 }
 .main-page {
   display: flex;
-  justify-content: space-between;
-  //width: auto;
-  //flex-wrap: wrap;
+  justify-content: space-around;
 
   @include mobile {
     flex-wrap: wrap;

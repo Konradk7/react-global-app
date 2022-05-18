@@ -1,7 +1,8 @@
 .fitness-app {
   height: toRem(400);
-  width: toRem(800);
+  min-width: toRem(800);
   padding: toRem(20);
+  max-width: toRem(900);
 
   &__btn {
     @extend %fitness-btn;
@@ -45,7 +46,10 @@
       cursor: default;
       animation-name: falling-down;
       animation-duration: 2s;
+      @include mobile {
+        //margin: 0;
 
+      }
 
       &::before {
         background-image: url("../../images/pizza.png");

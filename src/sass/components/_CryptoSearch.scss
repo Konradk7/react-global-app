@@ -20,7 +20,7 @@
 }
 
 .crypto-search {
-
+  min-width: toRem(250);
   &__form {
     @extend %border;
     width: 100%;
