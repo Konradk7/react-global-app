@@ -32,7 +32,8 @@
       padding: toRem(2) toRem(50);
       position: relative;
       cursor: default;
-      transition: 3s;
+      animation-name: falling-down;
+      animation-duration: 2s;
 
       &::before {
         background-image: url("../../images/pizza.png");
@@ -44,13 +45,13 @@
         height: 60px;
         right: 400px;
         bottom: -10px;
+        animation-name: spin;
+        animation-duration: 2s;
         content: "";
 
+      }
 
-      }
-      &:hover {
-        transform: translate3d(2rem, 0.2rem, 3rem);
-      }
+
 
       &::after {
         background-image: url("../../images/drink.png");
@@ -62,6 +63,8 @@
         height: 60px;
         right: -105px;
         bottom: -5px;
+        animation-name: spin;
+        animation-duration: 2s;
         content: "";
 
       }

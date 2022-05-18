@@ -51,8 +51,10 @@ $color-fitness-scrollbar: linear-gradient(150deg, orangered 0%, black 100%);
   color: #ffff;
   font-family: "DejaVu Serif";
   font-weight: bold;
-  //padding: toRem(7) toRem(7);
   text-shadow: toRem(1) toRem(2)  black;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 @keyframes loading {
@@ -88,5 +90,13 @@ $color-fitness-scrollbar: linear-gradient(150deg, orangered 0%, black 100%);
   to{
     transform: rotate(360deg);
 
+  }
+}
+@keyframes falling-down {
+  from {
+    transform: translate3d(2rem, -10rem, 3rem);
+  }
+  to{
+    transform: translate3d(0, 0, 0);
   }
 }
