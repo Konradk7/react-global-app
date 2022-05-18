@@ -27,10 +27,17 @@ function Crypto(props) {
         setSearch(e.target.value);
     }
 
+    const curDate = () => {
+        const date = new Date();
+        const dd = date.getDate();
+        const mm = date.getMonth() + 1;
+        const yy = date.getFullYear();
+        return `${dd}-${mm}-${yy}`;
+    }
 
     const handleCryptoSubmit = (e) => {
         e.preventDefault()
-        const COINURL = `https://api.coingecko.com/api/v3/coins/${search}/history?date=15-5-2022&localization=false`;
+        const COINURL = `https://api.coingecko.com/api/v3/coins/${search}/history?date=${curDate()}&localization=false`;
 
         fetch(COINURL)
             .then(response => {

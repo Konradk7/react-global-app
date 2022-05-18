@@ -1,0 +1,36 @@
+.fitness-app {
+  height: toRem(400);
+  width: toRem(800);
+  padding: toRem(20);
+
+  &-container {
+    background-image: url("../../images/food.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    padding: toRem(20);
+    border-radius: toRem(20);
+    overflow: auto;
+    @extend %box-shadow;
+    @extend %border;
+    &::-webkit-scrollbar {
+      background: transparent;
+      width: toRem(12);
+
+    }
+
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 toRem(7) white;
+      @extend %fitness-scrollbar;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $color-fitness-scrollbar;
+      @extend %fitness-scrollbar;
+      border: toRem(1) solid gray;
+    }
+
+  }
+}

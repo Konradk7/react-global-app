@@ -28,11 +28,21 @@ $color-crypto-inputs: rgb(61, 61, 92);
 $color-crypto-text-background: rgba(61, 61, 92);
 $color-crypto-result-background: linear-gradient(gray 60%, black);
 
+$color-fitness-app: linear-gradient(gray 60%, blue);
+$color-fitness-scrollbar: black;
+
 %border {
   border: toRem(3) solid $color-weather-form-border;
 }
+%box-shadow {
+  box-shadow: 0 0 toRem(5) 0 black;
+
+}
 %form-btns-radius {
   border-radius: 0 0 toRem(30) toRem(30);
+}
+%fitness-scrollbar {
+  border-radius: toRem(10) toRem(30) toRem(30) toRem(10);
 }
 
 @keyframes loading {

@@ -3,6 +3,7 @@
   background: $color-weather-home;
   height: calc(100vh - 99px);
   overflow: auto;
+  position: relative;
 
   &-background {
     position: relative;
@@ -15,7 +16,7 @@
       border-radius: 50%;
       box-shadow: 0 0 toRem(5) 0 white;
       opacity: 0.1;
-
+      z-index: 1;
 
       @keyframes scale-frames {
         0% {
@@ -32,7 +33,7 @@
       }
       @keyframes moveing {
         from {
-          transform: translateY(89vh);
+          transform: translateY(85vh);
         }
 
       }
@@ -43,43 +44,43 @@
       }
 
       &:nth-child(1) {
-        left: 15px;
+        left: toRem(15);
         animation: scale-frames 2s infinite, moveing 10s infinite alternate-reverse;
       }
 
       &:nth-child(2) {
-        left: 30px;
+        left: toRem(30);
         animation: scale-frames 1s infinite, moveing 15s infinite alternate-reverse;
 
 
       }
 
       &:nth-child(3) {
-        left: 45px;
+        left: toRem(45);
         animation: scale-frames 3s infinite, moveing 20s infinite alternate-reverse;
 
       }
 
       &:nth-child(4) {
-        left: 60px;
+        left: toRem(60);
         animation: scale-frames 2.5s infinite, moveing 17s infinite alternate-reverse;
 
       }
 
       &:nth-child(5) {
-        left: 75px;
+        left: toRem(75);
         animation: scale-frames 1.5s infinite, moveing 12s infinite alternate-reverse;
 
       }
 
       &:nth-child(6) {
-        left: 90px;
+        left: toRem(90);
         animation: scale-frames 3s infinite, moveing 15s infinite alternate-reverse;
 
       }
 
       &:nth-child(7) {
-        left: 105px;
+        left: toRem(105);
         animation: scale-frames 1.5s infinite, moveing 20s infinite alternate-reverse;
 
       }
@@ -87,7 +88,6 @@
   }
   &-background-2 {
     position: relative;
-
     &__circle {
       position: absolute;
       height: toRem(5);
@@ -96,6 +96,11 @@
       border-radius: 50%;
       box-shadow: 0 0 toRem(5) 0 white;
       opacity: 0.1;
+      z-index: 1;
+      //@include mobile {
+      //  height: 0;
+      //  width: 0;
+      //}
 
 
       @keyframes scale-frames {
@@ -113,7 +118,7 @@
       }
       @keyframes moveing {
         from {
-          transform: translateY(89vh);
+          transform: translateY(85vh);
         }
 
       }
@@ -124,43 +129,43 @@
       }
 
       &:nth-child(1) {
-        left: 1735px;
+        left: toRem(1735);
         animation: scale-frames 2s infinite, moveing 10s infinite alternate-reverse;
       }
 
       &:nth-child(2) {
-        left: 1780px;
+        left: toRem(1780);
         animation: scale-frames 1s infinite, moveing 15s infinite alternate-reverse;
 
 
       }
 
       &:nth-child(3) {
-        left: 1750px;
+        left: toRem(1750);
         animation: scale-frames 3s infinite, moveing 20s infinite alternate-reverse;
 
       }
 
       &:nth-child(4) {
-        left: 1765px;
+        left: toRem(1765);
         animation: scale-frames 2.5s infinite, moveing 17s infinite alternate-reverse;
 
       }
 
       &:nth-child(5) {
-        left: 1795px;
+        left: toRem(1795);
         animation: scale-frames 1.5s infinite, moveing 12s infinite alternate-reverse;
 
       }
 
       &:nth-child(6) {
-        left: 1810px;
+        left: toRem(1810);
         animation: scale-frames 3s infinite, moveing 15s infinite alternate-reverse;
 
       }
 
       &:nth-child(7) {
-        left: 1825px;
+        left: toRem(1825);
         animation: scale-frames 1.5s infinite, moveing 20s infinite alternate-reverse;
 
       }
@@ -174,7 +179,8 @@
     background: $color-main-background;
     //height: auto;
     height: 100%;
-
+    z-index: 10;
+    position: relative;
   }
 }
 
