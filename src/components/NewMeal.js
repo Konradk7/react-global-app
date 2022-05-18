@@ -13,6 +13,9 @@ function NewMeal({onNewMeal}) {
     const handleAddItem = e => {
         setValue(e.target.value)
     }
+    const handleRemoveTitle = id => {
+        setTitle(prevState => prevState.filter(title => title !== id));
+    };
 
     return (
 
@@ -20,7 +23,11 @@ function NewMeal({onNewMeal}) {
             <input type="text" value={value} onChange={handleAddItem} placeholder="Add meals..." className="fitness-title__container__input"/>
             <button onClick={handleAddTitle} className="fitness-title__container__button"><img src={plus} alt="Add"/></button>
             {title.map((title, idx) => {
-                return <ul key={idx} className="fitness-title__container__list">{title}<Meal /></ul>
+                return <ul key={idx} className="fitness-title__container__list">
+                    {title}
+                    <button onClick={handleRemoveTitle} className="fitness-title__container__list-remove">x</button>
+                    <Meal />
+                </ul>
             })}
         </div>
     );

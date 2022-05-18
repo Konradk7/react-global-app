@@ -23,7 +23,22 @@
     color: #4d4d4d;
     border: toRem(2) solid gray;
     border-radius: toRem(15);
-    margin: 5px;
+    margin: toRem(5);
+    padding: toRem(10) 0;
+
+    &-remove {
+      border: none;
+      background: transparent;
+      margin-left: toRem(100);
+      transition: 0.3s;
+      opacity: 0.1;
+      &:hover {
+        color: $color-remove-item;
+        transform: scale(1.5);
+        opacity: 1;
+
+      }
+    }
   }
 
   &__button {

@@ -26,6 +26,7 @@ function Meal(props) {
             <button onClick={handleAddIngredients} className="fitness-body__container__btn">Add</button>
                 {ingredients.map((el, idx) => {
                     return <li
+                        className="fitness-body__container__text"
                         key={idx}
                         >
                         {el}
