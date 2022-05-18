@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Weather from "./Weather";
 import arrow from "../images/arrow.png";
 import Crypto from "./Crypto";
+import FitnessForm from "./FitnessForm";
 
 function MyApps(props) {
     const [slides, setSlides] = useState([
@@ -14,7 +15,7 @@ function MyApps(props) {
             id: 2,
         },
         {
-            app: <Weather/>,
+            app: <FitnessForm />,
             id: 3,
         }
     ])

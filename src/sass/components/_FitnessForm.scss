@@ -1,0 +1,16 @@
+.fitness-form {
+  width: toRem(250);
+  height: toRem(500);
+  margin: toRem(20);
+  &__container {
+    @extend %border;
+    border-radius: toRem(3);
+    @extend %box-shadow;
+    height: 100%;
+    background-image: url("../../images/food-form.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: toRem(20);
+  }
+}
