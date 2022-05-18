@@ -1,0 +1,18 @@
+.fitness-title-container {
+  display: flex;
+  //overflow: auto;
+  //flex-wrap: wrap;
+  &__input {
+    height: toRem(20);
+    width: toRem(120);
+
+  }
+  &__button {
+    height: toRem(27);
+    width: toRem(20);
+    img {
+      height: toRem(20);
+      width: toRem(10);
+    }
+  }
+}
