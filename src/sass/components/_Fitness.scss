@@ -5,6 +5,16 @@
 
   &__btn {
     @extend %fitness-btn;
+    &__remove {
+      color: lighten($color-error-message, 10%);
+      border: none;
+      background: transparent;
+      transition: 0.2s;
+      &:hover {
+        color: $color-error-message;
+        transform: scale(1.5);
+      }
+    }
   }
 
   &-container {
@@ -82,11 +92,14 @@
       background: #ff8000;
       border-radius: toRem(20) toRem(20);
       margin-bottom: toRem(10);
+
     }
 
     &__head {
-      background: white;
+      background: $color-fitness-list-elements;
+      border: toRem(1.5) solid black;
       padding: toRem(10);
+
 
       &:first-of-type {
         border-radius: 10px 10px 0 0;
@@ -97,8 +110,12 @@
       }
 
       &-element {
-        font-size: toRem(20);
-
+        font-size: toRem(28);
+        color: black;
+        border-bottom: toRem(1) solid darkgray;
+        width: 100%;
+        padding: toRem(5) 0;
+        margin: toRem(10) 0;
       }
     }
   }

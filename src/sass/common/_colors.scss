@@ -31,6 +31,7 @@ $color-crypto-result-background: linear-gradient(gray 60%, black);
 $color-fitness-app: linear-gradient(gray 60%, blue);
 $color-fitness-scrollbar: linear-gradient(150deg, orangered 0%, black 100%);
 $color-fitness-title: linear-gradient( #ffff99 0%, orangered 90%);
+$color-fitness-list-elements: #e6e6e6;
 
 %border {
   border: toRem(3) solid $color-weather-form-border;

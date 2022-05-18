@@ -26,16 +26,17 @@ function Fitness(props) {
                     <p className="fitness-app-container__title">Let's create a plan!</p>
                 </div>
                 {day.map((day, idx) => {
-                    return <ul
-                        key={idx}
-                        className="fitness-app-container__head"
-                    >
-                        <li className="fitness-app-container__head-element">
-                            {day}
-                        </li>
-                        <button onClick={handleRemoveDay}>Remove Day</button>
-                        <NewMeal/>
-                    </ul>
+                    return (
+                        <ul key={idx} className="fitness-app-container__head">
+
+                            <div style={{display: 'flex'}}>
+                                <li className="fitness-app-container__head-element">{day}</li>
+                                <button onClick={handleRemoveDay} className="fitness-app__btn__remove">X</button>
+                            </div>
+                            <NewMeal/>
+
+                        </ul>
+                    )
                 })}
             </div>
         </div>
