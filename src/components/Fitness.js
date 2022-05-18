@@ -9,7 +9,9 @@ function Fitness(props) {
     const handleAddDay = () => {
         setDay(prevState => [...prevState, `Day: ${day.length + 1}`])
     }
+    const handleRemoveDay = () => {
 
+    }
 
     return (
         <div className="fitness-app">

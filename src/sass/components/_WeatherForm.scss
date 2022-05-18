@@ -4,6 +4,7 @@
   display: flex;
   width: toRem(250);
   flex-direction: column-reverse;
+  height: 100%;
 
   &__error-message {
     border: toRem(3) solid black;
@@ -20,13 +21,13 @@
 }
 
 .weather-form {
-
+height: 100%;
   &:hover {
     transform: scale(1.015);
-    box-shadow: 0 0 toRem(30) 0 $color-slide-boxs-shadow;
+    //box-shadow: 0 0 toRem(30) 0 $color-slide-boxs-shadow;
     border-radius: toRem(30);
     cursor: pointer;
-    background: $color-slide-boxs-shadow;
+    //background: $color-slide-boxs-shadow;
 
   }
   &-container {

@@ -12,5 +12,23 @@
     background-position: center;
     background-repeat: no-repeat;
     padding: toRem(20);
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.015);
+    }
+    &__title {
+      font-size: toRem(23);
+      text-align: center;
+      color: white;
+      text-shadow: toRem(1) toRem(2) black;
+      font-weight: bolder;
+    }
+    &__body {
+      font-size: toRem(18);
+      line-height: toRem(20);
+      font-family: Charmonman;
+      color: black;
+      border-top: toRem(1) solid black;
+    }
   }
 }

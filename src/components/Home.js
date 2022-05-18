@@ -11,12 +11,14 @@ function Home(props) {
     return (
 
             <>
+                <div style={{display: 'flex', justifyContent: 'space-between'}}>
                     <Fitness />
-                    {/*<Crypto />*/}
+                    <Crypto />
                     {/*<SignIn />*/}
                     {/*    <Register />*/}
-                    {/*<Weather*/}
+                    <Weather />
                     {/*/>*/}
+                </div>
             </>
 
     );

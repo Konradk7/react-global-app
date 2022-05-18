@@ -14,8 +14,8 @@ function Header(props) {
                 <nav className="header-container__nav">
                     <Link to="/">Home</Link>
                     <Link to="/my-apps">My Apps</Link>
-                    <a href="/contact">Contact</a>
-                    <a href="/signIn">Zaloguj</a>
+                    <Link to="/contact">Contact</Link>
+                    <Link to="/signIn">Sign In</Link>
                     {/*<div className="header-container__nav-hamburger">*/}
                     {/*<span></span>*/}
                     {/*<span></span>*/}

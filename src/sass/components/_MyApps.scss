@@ -17,15 +17,16 @@
     }
   }
   &__slider {
-    margin-top: toRem(50);
+    margin-top: toRem(30);
     @extend %border;
-    padding: toRem(50);
+    padding: toRem(40);
     width: 100%;
     border-radius: toRem(5);
     background: $color-slider-background;
     position: relative;
     height: toRem(600);
 
+    flex-direction: column;
 
     //&::before{
     //  content: '';
