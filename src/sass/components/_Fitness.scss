@@ -22,10 +22,10 @@
 
 
     &__title {
-      background: white;
+      background: $color-fitness-title;
       @extend %border;
       @extend %box-shadow;
-      border-radius: toRem(3);
+      border-radius: toRem(5);
       margin: 0 toRem(190) toRem(10) 0;
       font-size: toRem(30);
       font-family: "DejaVu Serif";
@@ -35,18 +35,14 @@
       animation-name: falling-down;
       animation-duration: 2s;
 
+
       &::before {
         background-image: url("../../images/pizza.png");
-        position: absolute;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 100px;
-        height: 60px;
-        right: 400px;
-        bottom: -10px;
-        animation-name: spin;
-        animation-duration: 2s;
+        @extend %fitness-title-images;
+        width: toRem(100);
+        height: toRem(60);
+        right: toRem(395);
+        bottom: toRem(-10);
         content: "";
 
       }
@@ -55,16 +51,11 @@
 
       &::after {
         background-image: url("../../images/drink.png");
-        position: absolute;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 100px;
-        height: 60px;
-        right: -105px;
-        bottom: -5px;
-        animation-name: spin;
-        animation-duration: 2s;
+       @extend %fitness-title-images;
+        width: toRem(100);
+        height: toRem(60);
+        right: toRem(-105);
+        bottom: toRem(-5);
         content: "";
 
       }

@@ -30,7 +30,7 @@ $color-crypto-result-background: linear-gradient(gray 60%, black);
 
 $color-fitness-app: linear-gradient(gray 60%, blue);
 $color-fitness-scrollbar: linear-gradient(150deg, orangered 0%, black 100%);
-
+$color-fitness-title: linear-gradient( #ffff99 0%, orangered 90%);
 
 %border {
   border: toRem(3) solid $color-weather-form-border;
@@ -55,6 +55,14 @@ $color-fitness-scrollbar: linear-gradient(150deg, orangered 0%, black 100%);
   &:hover {
     transform: scale(1.1);
   }
+}
+%fitness-title-images{
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation-name: spin;
+  animation-duration: 2s;
 }
 
 @keyframes loading {
