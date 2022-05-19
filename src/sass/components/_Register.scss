@@ -1,11 +1,11 @@
 .register {
   position: relative;
-  min-width: 1400px;
+  min-width: 1600px;
 
   .register-container {
     background: lightgray;
     width: 50%;
-
+    border-radius: toRem(10);
     position: relative;
     left: toRem(250);
     top: toRem(50);
@@ -13,9 +13,12 @@
     box-shadow: 0 0 toRem(5) 0 black;
 
     &-logo {
-      font-size: toRem(35);
+      font-size: toRem(45);
       font-family: "Bitstream Charter";
       cursor: default;
+      margin-bottom: toRem(20);
+      text-align: center;
+      font-weight: bolder;
     }
 
     &-form {
@@ -25,37 +28,45 @@
         width: 100%;
         height: toRem(30);
         margin-bottom: toRem(10);
-
+        box-shadow: 0 0 toRem(1) 0 black;
+        @extend %border;
       }
 
       &__checkbox {
         position: relative;
-        bottom: toRem(58);
+        bottom: toRem(48);
         width: toRem(10);
-        left: toRem(320);
+        left: toRem(375);
         cursor: pointer;
+        box-shadow: 0 0 0 0 transparent !important;
       }
 
       &__param {
+        margin-top: toRem(20);
         background: white;
-        padding: toRem(20);
+        padding: toRem(20) ;
+        width: 96%;
         cursor: pointer;
-        box-shadow: 0 0 1px 0 black;
+        //box-shadow: 0 0 toRem(3) 0 black;
+        @extend %border;
+
 
         &:hover {
-          box-shadow: 0 0 5px 0 black;
+          box-shadow: 0 0 toRem(5) 0 black;
         }
       }
 
       &__button {
         padding: toRem(10) toRem(25);
-        margin-left: toRem(550);
+        margin-left: toRem(650);
         border-radius: toRem(8);
-        border: none;
+        @extend %border;
+
         cursor: pointer;
         background: gray;
         font-size: toRem(25);
         font-weight: bolder;
+
         &:hover{
           box-shadow: 0 0 5px 0 black;
         }
