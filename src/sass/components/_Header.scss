@@ -2,11 +2,12 @@
 .header {
   background: $color-header-navBar;
   border-bottom: toRem(2) solid black;
-
+  min-width: toRem(1400);
 
 
   &-container {
-    max-width: 1600px;
+    max-width: toRem(1600);
+
     margin: 0 auto;
     display: flex;
     justify-content: space-between;

@@ -1,11 +1,14 @@
 .contact-container {
   min-height: toRem(600);
-  max-height: toRem(800);
-  padding: toRem(50) toRem(100);
-
+  min-width: toRem(1080);
+  padding: toRem(20) toRem(100);
+  transform: scale(0.9);
+  cursor: default;
   &__main {
-    background: darken(aliceblue, 5%);
+    background: $color-contact-main;
     height: 100%;
+    border-radius: toRem(10);
+
     @extend %border;
     @extend %box-shadow;
     font-family: C059;
@@ -14,7 +17,7 @@
       display: flex;
       justify-content: space-between;
       &-info {
-        padding: toRem(50);
+        padding: toRem(35) toRem(50) 0 toRem(50);
         font-family: Chandas;
         h1, h2 {
           display: flex;
@@ -36,7 +39,41 @@
         margin: toRem(20);
       }
     }
+    &__body {
+      margin: toRem(10) toRem(100);
+      padding: toRem(5) toRem(30);
+      background: $color-contact-body;
+      font-family: Chandas;
+      line-height: toRem(20);
+      border-radius: toRem(10);
+      box-shadow: 0 0 toRem(5) 0 white;
 
+      &-head {
+        font-size: toRem(18);
+        span {
+          color: darkslategray;
+        }
+      }
+      &-general {
+        display: flex;
+        justify-content: space-between;
+        p {
+          width: toRem(350);
+        }
+        &-list {
+          h4 {
+            font-size: toRem(20);
+          }
+          li {
+            list-style: number;
+
+          }
+
+        }
+
+      }
+
+    }
     h1, h2, h3, h4 {
       font-weight: bold;
       border-bottom: toRem(2) dashed gray;
@@ -48,18 +85,10 @@
     h1, h2 {
       font-size: toRem(30);
     }
-    h4 {
-      width: 20%;
+    &__footer {
+      font-size: toRem(15);
+      text-align: end;
     }
-    ul {
-      width: 15%;
-      //display: flex;
-      //justify-content: center;
-      //flex-direction: column;
-      li {
-        list-style: circle;
-        border-bottom: 1px solid black;
-      }
-    }
+
   }
 }

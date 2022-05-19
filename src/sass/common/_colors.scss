@@ -34,6 +34,9 @@ $color-fitness-scrollbar: linear-gradient(150deg, orangered 0%, black 100%);
 $color-fitness-title: linear-gradient( #ffff99 0%, orangered 90%);
 $color-fitness-list-elements: #e6e6e6;
 
+$color-contact-main: darken(aliceblue, 3%);
+$color-contact-body: aliceblue;
+
 %border {
   border: toRem(3) solid $color-weather-form-border;
 }
