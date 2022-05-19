@@ -1,0 +1,48 @@
+.contact-container {
+  height: toRem(600);
+  padding: toRem(70);
+  &__main {
+    background: darken(aliceblue, 5%);
+    padding: toRem(50);
+    height: 100%;
+    @extend %border;
+    @extend %box-shadow;
+    font-family: C059;
+
+    &__head {
+      display: flex;
+      justify-content: space-between;
+    }
+    img {
+      height: toRem(300);
+      width: toRem(300);
+      border-radius: 50%;
+      @extend %border;
+      @extend %box-shadow;
+    }
+    h1, h2, h3, h4 {
+      font-weight: bold;
+      border-bottom: toRem(2) dashed gray;
+      text-align: center;
+      margin-bottom: toRem(20);
+      padding: toRem(10);
+
+    }
+    h1, h2 {
+      font-size: toRem(30);
+    }
+    h4 {
+      width: 20%;
+    }
+    ul {
+      width: 15%;
+      //display: flex;
+      //justify-content: center;
+      //flex-direction: column;
+      li {
+        list-style: circle;
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+}
