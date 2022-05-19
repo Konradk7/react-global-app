@@ -1,11 +1,10 @@
 .contact-container {
   min-height: toRem(600);
   max-height: toRem(800);
-  padding: toRem(70);
+  padding: toRem(50) toRem(100);
 
   &__main {
     background: darken(aliceblue, 5%);
-    padding: toRem(50);
     height: 100%;
     @extend %border;
     @extend %box-shadow;
@@ -15,6 +14,8 @@
       display: flex;
       justify-content: space-between;
       &-info {
+        padding: toRem(50);
+        font-family: Chandas;
         h1, h2 {
           display: flex;
         }
@@ -31,17 +32,11 @@
         @extend %border;
         @extend %box-shadow;
         margin-bottom: toRem(10);
-        
+        width: toRem(350);
+        margin: toRem(20);
       }
     }
-    //img {
-    //  height: toRem(100);
-    //  width: toRem(100);
-    //  border-radius: 50%;
-    //  @extend %border;
-    //  @extend %box-shadow;
-    //
-    //}
+
     h1, h2, h3, h4 {
       font-weight: bold;
       border-bottom: toRem(2) dashed gray;
