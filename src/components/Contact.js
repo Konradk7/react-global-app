@@ -1,5 +1,9 @@
 import React from 'react';
 import photo from "../images/profile-photo.jpeg";
+import mail from "../images/mail.png";
+import phone from "../images/phone.png";
+import info from "../images/info.png";
+import hey from "../images/hey.png";
 
 function Contact(props) {
     return (
@@ -8,12 +12,12 @@ function Contact(props) {
                 <div className="contact-container__main">
                     <div className="contact-container__main__head">
                         <div className="contact-container__main__head-info">
-                            <h1>Hi! My name is Konrad Kędroń</h1>
-                            <h2>Mail: konrad.kdro7@gmail.com</h2>
-                            <h2>Phone: 796 082 728</h2>
-                            <h2>About me and my app!</h2>
+                            <h1><img src={hey} alt="Hi!"/>Hi! My name is Konrad Kędroń</h1>
+                            <h2><img src={mail} alt="Mail"/>Mail: konrad.kdro7@gmail.com</h2>
+                            <h2><img src={phone} alt="Phone"/>Phone: 796 082 728</h2>
+                            <h2><img src={info} alt="Info"/>About me and my app!</h2>
                         </div>
-                        <img src={photo} alt="Profile-photo"/>
+                        <img src={photo} alt="Profile-photo" className="contact-container__main__head-photo"/>
                     </div>
 
                     <h3>I'm frontend developer from Wroclaw. It's my first big public project so please be understanding
@@ -55,6 +59,7 @@ function Contact(props) {
                         <li>Cooking</li>
                         <li>Fashion</li>
                     </ul>
+                    <h5>Everything was create after course in <a href="https://coderslab.pl/pl">CodersLab</a> Academy</h5>
                 </div>
             </div>
         </>

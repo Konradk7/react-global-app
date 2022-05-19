@@ -1,6 +1,8 @@
 .contact-container {
-  height: toRem(600);
+  min-height: toRem(600);
+  max-height: toRem(800);
   padding: toRem(70);
+
   &__main {
     background: darken(aliceblue, 5%);
     padding: toRem(50);
@@ -12,14 +14,34 @@
     &__head {
       display: flex;
       justify-content: space-between;
+      &-info {
+        h1, h2 {
+          display: flex;
+        }
+        img {
+          padding-right: toRem(10);
+          margin-right: toRem(10);
+          height: toRem(30);
+          border-right: toRem(2) solid black;
+        }
+      }
+      &-photo {
+        height: toRem(300);
+        border-radius: 50%;
+        @extend %border;
+        @extend %box-shadow;
+        margin-bottom: toRem(10);
+        
+      }
     }
-    img {
-      height: toRem(300);
-      width: toRem(300);
-      border-radius: 50%;
-      @extend %border;
-      @extend %box-shadow;
-    }
+    //img {
+    //  height: toRem(100);
+    //  width: toRem(100);
+    //  border-radius: 50%;
+    //  @extend %border;
+    //  @extend %box-shadow;
+    //
+    //}
     h1, h2, h3, h4 {
       font-weight: bold;
       border-bottom: toRem(2) dashed gray;
