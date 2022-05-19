@@ -39,5 +39,14 @@
       @extend %box-shadow;
       text-align: center;
     }
+    &__footer {
+      margin: toRem(50);
+      width: toRem(120);
+      transition: 3s;
+      &:hover {
+        transform: translateX(toRem(60));
+
+      }
+    }
   }
 }
