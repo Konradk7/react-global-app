@@ -1,19 +1,19 @@
 
 .header {
   background: $color-header-navBar;
-  border-bottom: toRem(2) solid black;
   min-width: toRem(1400);
+  border-bottom: toRem(2) solid black;
 
 
   &-container {
+    min-width: toRem(900);
     max-width: toRem(1600);
-
-    margin: 0 auto;
+    height: toRem(97);
     display: flex;
     justify-content: space-between;
-    height: toRem(97);
     align-items: center;
-    min-width: 900px;
+    margin: 0 auto;
+
     &__logo {
       font-size: toRem(30);
       font-weight: bolder;
@@ -35,63 +35,33 @@
       }
 
       &-element {
-        color: $color-header-logo_elements;
         font-family: "Charmonman";
+        color: $color-header-logo_elements;
       }
     }
 
     &__nav {
       a {
-        margin: toRem(50);
-        font-size: toRem(28);
-        text-decoration: none;
         font-family: "Rasa SemiBold";
+        font-size: toRem(28);
         color: $color-header-navBar_elements;
+        margin: toRem(50);
+        text-decoration: none;
+
 
         &:last-child {
           margin-right: 0;
         }
 
-        //@include mobile {
-        //  display: none;
-        //}
+
         &:hover {
+          color: $color-header-navBar_elements-hover;
           padding-bottom: toRem(26);
           border-bottom: toRem(2) solid $color-header-navBar_elements-hover;
-          color: $color-header-navBar_elements-hover;
-
 
         }
       }
-
     }
-
   }
 }
 
-//.header-container__nav-hamburger {
-//  display: none;
-//
-//  padding: 2px;
-//  cursor: pointer;
-//  margin-right: 5px;
-//  &:hover{
-//    display: block;
-//    box-shadow: 0 0 3px 0 gray;
-//  }
-//  @include mobile {
-//    display: block;
-//
-//  }
-//  span{
-//    background: black;
-//    width: 65px;
-//    height: 12px;
-//    margin: 7px;
-//    border-radius: 13px;
-//
-//    @include mobile {
-//      display: block;
-//    }
-//  }
-//}

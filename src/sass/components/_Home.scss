@@ -1,20 +1,20 @@
 
 .main {
-  background: $color-weather-home;
   min-height: calc(100vh - 99px);
-  overflow: auto;
-  min-width: toRem(1400);
-  position: relative;
   height: auto;
+  min-width: toRem(1400);
+  background: $color-weather-home;
+  overflow: auto;
+  position: relative;
 
   &-background {
     position: relative;
 
     &__circle {
-      position: absolute;
       height: toRem(5);
       width: toRem(5);
       background: white;
+      position: absolute;
       border-radius: 50%;
       box-shadow: 0 0 toRem(5) 0 white;
       opacity: 0.1;
@@ -91,18 +91,15 @@
   &-background-2 {
     position: relative;
     &__circle {
-      position: absolute;
       height: toRem(5);
       width: toRem(5);
       background: white;
+      position: absolute;
       border-radius: 50%;
       box-shadow: 0 0 toRem(5) 0 white;
       opacity: 0.1;
       z-index: 1;
-      //@include mobile {
-      //  height: 0;
-      //  width: 0;
-      //}
+
 
 
       @keyframes scale-frames {
@@ -177,10 +174,10 @@
   .main-container {
     max-width: toRem(1600);
     min-width: toRem(1200);
+    min-height: toRem(800);
+    background: $color-main-background;
     margin: 0 auto;
     box-shadow: 0 0 toRem(10) 0 black;
-    background: $color-main-background;
-    min-height: toRem(800);
     height: auto;
     z-index: 10;
     position: relative;
@@ -191,9 +188,5 @@
 .main-page {
   display: flex;
   justify-content: space-around;
-  //
-  //@include mobile {
-  //  flex-wrap: wrap;
-  //}
 }
 
