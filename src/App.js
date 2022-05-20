@@ -19,22 +19,22 @@ function App(props) {
             <div className="main">
 
                 <div className="main-background">
-                    <div className="main-background__circle"></div>
-                    <div className="main-background__circle"></div>
-                    <div className="main-background__circle"></div>
-                    <div className="main-background__circle"></div>
-                    <div className="main-background__circle"></div>
-                    <div className="main-background__circle"></div>
-                    <div className="main-background__circle"></div>
+                    <div className="main-background__circle" />
+                    <div className="main-background__circle" />
+                    <div className="main-background__circle" />
+                    <div className="main-background__circle" />
+                    <div className="main-background__circle" />
+                    <div className="main-background__circle" />
+                    <div className="main-background__circle" />
                 </div>
                 <div className="main-background-2">
-                    <div className="main-background-2__circle"></div>
-                    <div className="main-background-2__circle"></div>
-                    <div className="main-background-2__circle"></div>
-                    <div className="main-background-2__circle"></div>
-                    <div className="main-background-2__circle"></div>
-                    <div className="main-background-2__circle"></div>
-                    <div className="main-background-2__circle"/>
+                    <div className="main-background-2__circle" />
+                    <div className="main-background-2__circle" />
+                    <div className="main-background-2__circle" />
+                    <div className="main-background-2__circle" />
+                    <div className="main-background-2__circle" />
+                    <div className="main-background-2__circle" />
+                    <div className="main-background-2__circle" />
                 </div>
                 <div className="main-container">
                     <Routes>

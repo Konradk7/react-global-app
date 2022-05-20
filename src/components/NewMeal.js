@@ -19,7 +19,6 @@ function NewMeal() {
         setTitle(prevState => prevState.filter(el => el !== title[idx]));
     };
 
-
     return (
 
         <div className="fitness-title__container">
@@ -35,13 +34,14 @@ function NewMeal() {
                 <img src={plus} alt="Add"/>
             </button>
             {title.map((title, idx) => {
-                return <ul key={idx} className="fitness-title__container__list">
+                return (
+                    <ul key={idx} className="fitness-title__container__list">
                     {title[0].toLocaleUpperCase() + title.slice(1)}
                     <button onClick={() => handleRemoveTitle(idx)} className="fitness-title__container__list-remove">x
                     </button>
                     <Meal/>
                 </ul>
-            })}
+                )})}
         </div>
     );
 }
