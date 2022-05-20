@@ -1,49 +1,52 @@
 .crypto-app {
-  width: toRem(250);
   height: toRem(650);
+  width: toRem(250);
   padding: toRem(20);
+
   &:hover {
     transform: scale(1.01);
   }
+
   &__error-message {
-    border: toRem(3) solid black;
-    box-shadow: 0 0 toRem(5) 0 black;
-    background-color: $color-error-message;
-    cursor: default;
     font-family: "Droid Sans";
-    padding: toRem(5) toRem(10);
-    text-align: center;
-    text-transform: uppercase;
+    background-color: $color-error-message;
+    border: toRem(3) solid black;
     margin: toRem(10) 0;
     padding: toRem(20);
+    box-shadow: 0 0 toRem(5) 0 black;
+    cursor: default;
+    text-align: center;
+    text-transform: uppercase;
   }
 }
 
 .crypto-search {
   min-width: toRem(250);
+
   &__form {
-    @extend %border;
     width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
+    @extend %border;
     @extend %form-btns-radius;
-    cursor: pointer;
     box-shadow: 0 0 toRem(10) 0 black;
+    cursor: pointer;
 
     &-input {
+      font-size: toRem(20);
+      color: white;
       background: $color-crypto-inputs;
       border: none;
       border-top: toRem(3) solid black;
       text-align: center;
-      font-size: toRem(20);
-      color: white;
 
       &:last-of-type {
         font-weight: bolder;
         color: $color-fonts;
 
       }
+
       &__hide {
         display: none;
       }
@@ -69,20 +72,20 @@
 
       &__title {
         font-size: toRem(23);
-        padding: toRem(15);
-        color: white;
-        text-shadow: 0 0 toRem(15) black;
         font-weight: bolder;
+        color: white;
+        padding: toRem(15);
+        text-shadow: 0 0 toRem(15) black;
 
       }
 
       &__text {
+        font-size: toRem(20);
         background: $color-crypto-text-background;
         color: white;
         opacity: 80%;
         transition: 1.5s;
         padding: toRem(10);
-        font-size: toRem(20);
 
         &:hover {
           opacity: 100%;
@@ -123,10 +126,12 @@
           margin: toRem(10);
           color: black;
         }
+
         &-footer {
           font-size: toRem(14);
         }
       }
+
       &__footer {
         margin: toRem(10);
         text-align: end;

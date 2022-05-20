@@ -1,18 +1,18 @@
 .crypto-result {
+  font-family: "DejaVu Serif";
   width: toRem(250);
   height: toRem(100);
+  background: $color-crypto-result-background;
   @extend %border;
   padding: toRem(5);
-  background: $color-crypto-result-background;
-  font-family: "DejaVu Serif";
   position: relative;
   cursor: pointer;
 
   &:hover::before {
     content: 'x';
-    position: absolute;
     font-size: toRem(150);
     color: $color-error-message;
+    position: absolute;
     bottom: 1px;
     left: 90px;
     transform: scaleX(3.2);
@@ -26,20 +26,23 @@
 
     &__title {
       font-size: toRem(22);
-      color: black;
       font-weight: bolder;
+      color: black;
+
     }
 
     img {
-      @extend %border;
-      border-radius: 50%;
       background: black;
+      @extend %border;
       padding: toRem(2);
+      border-radius: 50%;
+
     }
+
     &__body {
-      color: gold;
-      font-weight: bolder;
       font-size: toRem(20);
+      font-weight: bolder;
+      color: gold;
 
     }
   }
