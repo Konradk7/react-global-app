@@ -1,0 +1,32 @@
+%border {
+  border: toRem(3) solid $color-weather-form-border;
+}
+%box-shadow {
+  box-shadow: 0 0 toRem(5) 0 black;
+
+}
+%form-btns-radius {
+  border-radius: 0 0 toRem(30) toRem(30);
+}
+%fitness-scrollbar {
+  border-radius: toRem(10) toRem(30) toRem(30) toRem(10);
+}
+%fitness-btn {
+  border: toRem(2) solid black;
+  @extend %box-shadow;
+  color: #ffff;
+  font-family: "DejaVu Serif";
+  font-weight: bold;
+  text-shadow: toRem(1) toRem(2)  black;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+%fitness-title-images{
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation-name: spin;
+  animation-duration: 2s;
+}

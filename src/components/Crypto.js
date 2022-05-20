@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import CryptoSearch from "./CryptoSearch";
 import CryptoResult from "./CryptoResult";
 
@@ -17,6 +17,7 @@ function Crypto() {
         setSearch('');
         setErr(false);
     }
+
     const handleRemoveItem = (e) => {
         e.preventDefault()
         setCoin("")
@@ -39,7 +40,7 @@ function Crypto() {
         e.preventDefault()
         const COINURL = `https://api.coingecko.com/api/v3/coins/${search}/history?date=${curDate()}&localization=false`;
 
-        fetch(COINURL, { mode: 'no-cors'})
+        fetch(COINURL, {mode: 'no-cors'})
             .then(response => {
                 if (response.ok) {
                     return response
@@ -63,10 +64,12 @@ function Crypto() {
     return (
         <div className="crypto-app">
 
-            {!coin && <CryptoSearch search={search} change={handleInputSearch} submit={handleCryptoSubmit} inputsValue={showInputs} inputs={handleShowInputs}/>}
+            {!coin && <CryptoSearch search={search} change={handleInputSearch} submit={handleCryptoSubmit}
+                                    inputsValue={showInputs} inputs={handleShowInputs}/>}
             {err
                 ? <h3 className="crypto-app__error-message">I don't know this coin!</h3>
-                : <CryptoResult name={coin} icon={coinIcon} symbol={symbolCoin} price={price} err={err} remove={handleRemoveItem} />
+                : <CryptoResult name={coin} icon={coinIcon} symbol={symbolCoin} price={price} err={err}
+                                remove={handleRemoveItem}/>
             }
         </div>
     );
