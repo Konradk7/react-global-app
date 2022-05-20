@@ -1,22 +1,23 @@
 
 .weather-app {
-  padding: toRem(10);
-  display: flex;
   width: toRem(250);
-  flex-direction: column-reverse;
   height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: toRem(10);
+
 
   &__error-message {
+    font-family: "Droid Sans";
+    background-color: $color-error-message;
+
     border: toRem(3) solid black;
     box-shadow: 0 0 toRem(5) 0 black;
-    background-color: $color-error-message;
     cursor: default;
-    font-family: "Droid Sans";
-    padding: toRem(5) toRem(10);
+    padding: toRem(20);
+    margin: toRem(10) 0;
     text-align: center;
     text-transform: uppercase;
-    margin: toRem(10) 0;
-    padding: toRem(20);
   }
 }
 
@@ -25,43 +26,41 @@
 
   &:hover {
     transform: scale(1.015);
-    //box-shadow: 0 0 toRem(30) 0 $color-slide-boxs-shadow;
     border-radius: toRem(30);
     cursor: pointer;
-    //background: $color-slide-boxs-shadow;
 
   }
 
   &-container {
+    width: toRem(204);
     background-image: url("../../images/weather.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: toRem(204);
-    box-shadow: 0 0 toRem(3) 0 black;
+    @extend %border;
     padding: toRem(20);
     margin-top: toRem(10);
-    @extend %border;
     border-bottom: none;
     border-radius: toRem(8) toRem(8) 0 0;
+    box-shadow: 0 0 toRem(3) 0 black;
 
     &__title {
-      color: white;
-      font-weight: bolder;
+      font-family: "Abyssinica SIL";
       font-size: toRem(17);
+      font-weight: bolder;
+      color: white;
       margin-bottom: toRem(10);
       padding-bottom: toRem(10);
-      font-family: "Abyssinica SIL";
       text-align: center;
       text-shadow: 0 0 toRem(15) black;
 
     }
 
     &__text {
+      font-family: "Roboto Thin";
       font-size: toRem(17);
       background-image: $color-weather-container;
       @extend %border;
-      font-family: "Roboto Thin";
       opacity: 90%;
       text-align: center;
       transform: scaleX(1.23);
@@ -73,8 +72,8 @@
       }
 
       &-footer {
-        margin: toRem(12);
         font-size: toRem(13);
+        margin: toRem(12);
       }
 
       &-main {
@@ -100,11 +99,11 @@
 
 
       &-element {
-        list-style: none;
-        font-weight: bolder;
-        font-size: toRem(25);
         font-family: "DejaVu Serif";
+        font-size: toRem(25);
+        font-weight: bolder;
         margin-bottom: toRem(10);
+        list-style: none;
 
         &:first-child {
           color: #1a1a1a;
@@ -124,19 +123,20 @@
   }
 
   &__input {
+    width: toRem(244);
     display: flex;
     flex-direction: column;
     @extend %border;
     @extend %form-btns-radius;
-    width: toRem(244);
 
     &-handle-btn {
-      padding: toRem(5) 0;
       background: $color-weather-form-input;
-      border: none;
       @extend %form-btns-radius;
       display: flex;
       justify-content: center;
+      padding: toRem(5) 0;
+      border: none;
+
 
       div {
         font-weight: bolder;
@@ -145,29 +145,28 @@
     }
 
     &-text {
-      text-align: center;
-      background-image: $color-weather-form-input;
       width: toRem(240);
+      background-image: $color-weather-form-input;
       border: transparent;
       outline: none;
+      text-align: center;
+
 
       &::placeholder {
+        font-weight: bolder;
         color: white;
         opacity: 40%;
-        font-weight: bolder;
 
       }
     }
 
     &-submit {
-      //width: 100%;
       font-weight: bolder;
       color: $color-weather-head;
+      background: $color-weather-form-input;
       border: transparent;
       border-top: toRem(3) solid black;
       border-bottom: toRem(3) solid black;
-
-      background: $color-weather-form-input;
       cursor: pointer;
       outline: none;
 
