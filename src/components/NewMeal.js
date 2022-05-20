@@ -7,8 +7,10 @@ function NewMeal() {
     const [value, setValue] = useState('')
 
     const handleAddTitle = e => {
+        if(!value) return
         setTitle(prevState => [...prevState, value]);
         setValue('');
+
     }
     const handleAddItem = e => {
         setValue(e.target.value)

@@ -40,7 +40,7 @@ function Crypto() {
         e.preventDefault()
         const COINURL = `https://api.coingecko.com/api/v3/coins/${search}/history?date=${curDate()}&localization=false`;
 
-        fetch(COINURL, {mode: 'no-cors'})
+        fetch(COINURL)
             .then(response => {
                 if (response.ok) {
                     return response
