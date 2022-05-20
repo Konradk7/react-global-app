@@ -6,6 +6,7 @@ function Meal() {
 
     const handleAddIngredients = e => {
         e.preventDefault();
+        if(!value || ingredients.includes(value)) return
         setIngredients(prevState => [...prevState, value]);
         setValue('');
     }
@@ -36,7 +37,7 @@ function Meal() {
                     key={idx}
                     onClick={() => handleRemoveValue(idx)}
                 >
-                    {el}
+                    {el[0].toLocaleUpperCase() + el.slice(1)}
 
                 </li>
             })}

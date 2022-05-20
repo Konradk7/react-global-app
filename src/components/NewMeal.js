@@ -7,7 +7,7 @@ function NewMeal() {
     const [value, setValue] = useState('')
 
     const handleAddTitle = e => {
-        if(!value) return
+        if(!value || title.includes(value)) return
         setTitle(prevState => [...prevState, value]);
         setValue('');
 
@@ -36,7 +36,7 @@ function NewMeal() {
             </button>
             {title.map((title, idx) => {
                 return <ul key={idx} className="fitness-title__container__list">
-                    {title}
+                    {title[0].toLocaleUpperCase() + title.slice(1)}
                     <button onClick={() => handleRemoveTitle(idx)} className="fitness-title__container__list-remove">x
                     </button>
                     <Meal/>
