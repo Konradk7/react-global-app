@@ -34,7 +34,7 @@ function App(props) {
                     <div className="main-background-2__circle"></div>
                     <div className="main-background-2__circle"></div>
                     <div className="main-background-2__circle"></div>
-                    <div className="main-background-2__circle"></div>
+                    <div className="main-background-2__circle"/>
                 </div>
                 <div className="main-container">
                     <Routes>

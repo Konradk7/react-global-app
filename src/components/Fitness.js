@@ -9,8 +9,8 @@ function Fitness(props) {
     const handleAddDay = () => {
         setDay(prevState => [...prevState, `Day: ${day.length + 1}`])
     }
-    const handleRemoveDay = () => {
-
+    const handleRemoveDay = (idx) => {
+        setDay(prevState => prevState.filter(el => el !== day[idx]))
     }
 
     return (
@@ -31,7 +31,7 @@ function Fitness(props) {
 
                             <div style={{display: 'flex'}}>
                                 <li className="fitness-app-container__head-element">{day}</li>
-                                <button onClick={handleRemoveDay} className="fitness-app__btn__remove">X</button>
+                                <button onClick={() => handleRemoveDay(idx)} className="fitness-app__btn__remove">X</button>
                             </div>
                             <NewMeal/>
 
