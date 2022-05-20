@@ -1,48 +1,54 @@
 .fitness-form {
-  width: toRem(250);
   height: toRem(500);
+  width: toRem(250);
   margin: toRem(20);
+
   &__container {
-    @extend %border;
-    border-radius: toRem(3);
-    @extend %box-shadow;
-    height: 100%;
     background-image: url("../../images/food-form.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 100%;
+    @extend %border;
+    @extend %box-shadow;
+    border-radius: toRem(3);
     padding: toRem(20) 0;
     cursor: pointer;
+
     &:hover {
       transform: scale(1.015);
     }
+
     &__title {
       font-size: toRem(23);
-      text-align: center;
-      color: white;
-      text-shadow: toRem(1) toRem(2) black;
       font-weight: bolder;
+      color: white;
       margin-bottom: toRem(15);
+      text-shadow: toRem(1) toRem(2) black;
+      text-align: center;
 
     }
+
     &__body {
-      font-size: toRem(15);
-      line-height: toRem(20);
-      padding: toRem(15);
       font-family: "DejaVu Sans";
+      font-size: toRem(15);
       font-weight: bold;
       color: white;
+      background: rgba(100, 20, 50, 0.8);
+      @extend %box-shadow;
+      padding: toRem(15);
       border-top: toRem(2) solid black;
       border-bottom: toRem(2) solid black;
-      background: rgba(100, 20, 50, 0.8);
       text-shadow: toRem(1) toRem(1) black;
-      @extend %box-shadow;
       text-align: center;
+      line-height: toRem(20);
     }
+
     &__footer {
-      margin: toRem(50);
       width: toRem(120);
+      margin: toRem(50);
       transition: 3s;
+
       &:hover {
         transform: translateX(toRem(60));
 

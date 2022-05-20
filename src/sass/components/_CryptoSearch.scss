@@ -96,15 +96,16 @@
 
 
         &-list {
+          font-size: toRem(20);
           display: flex;
           justify-content: space-between;
           margin: toRem(20) toRem(10);
-          font-size: toRem(20);
 
           &-element {
             &:first-child {
-              border-left: none;
               color: goldenrod;
+              border-left: none;
+
             }
 
             &:nth-child(2) {
@@ -120,11 +121,12 @@
         }
 
         &-main {
+          color: black;
           border-bottom: toRem(3) solid rgba(194, 194, 214, 0.3);
           border-top: toRem(3) solid rgba(194, 194, 214, 0.3);
           padding: toRem(15);
           margin: toRem(10);
-          color: black;
+
         }
 
         &-footer {
@@ -133,10 +135,11 @@
       }
 
       &__footer {
+        font-size: toRem(12);
+        color: lighten(black, 40%);
         margin: toRem(10);
         text-align: end;
-        color: lighten(black, 40%);
-        font-size: toRem(12);
+
       }
     }
   }

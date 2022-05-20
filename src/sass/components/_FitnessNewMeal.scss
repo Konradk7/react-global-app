@@ -1,37 +1,40 @@
 .fitness-title__container {
   display: flex;
   flex-wrap: wrap;
-  text-align: center;
   justify-content: space-around;
+  text-align: center;
+
   &__input {
+    font-family: "DejaVu Serif";
     height: toRem(20);
     width: toRem(120);
-    text-align: center;
     @extend %border;
     border-radius: toRem(5);
-    font-family: "DejaVu Serif";
     margin-bottom: toRem(10);
     box-shadow: 0 0 toRem(3) 0 black;
+    text-align: center;
 
   }
+
   &__list {
-    font-size: toRem(25);
     font-family: "DejaVu Sans";
+    font-size: toRem(25);
     font-weight: bold;
-    text-shadow: toRem(2) toRem(1) #1a1a1a;
-    @extend %box-shadow;
     color: #4d4d4d;
+    @extend %box-shadow;
     border: toRem(2) solid gray;
-    border-radius: toRem(15);
     margin: toRem(5);
     padding: toRem(10) 0;
+    text-shadow: toRem(2) toRem(1) #1a1a1a;
+    border-radius: toRem(15);
 
     &-remove {
-      border: none;
       background: transparent;
       margin-left: toRem(50);
+      border: none;
       transition: 0.3s;
       opacity: 0.1;
+
       &:hover {
         color: $color-remove-item;
         transform: scale(1.5);
@@ -44,9 +47,9 @@
   &__button {
     height: toRem(27);
     width: toRem(40);
+    background: transparent;
     margin-right: toRem(590);
     border: none;
-    background: transparent;
     transition: 0.3s;
 
     &:hover {
