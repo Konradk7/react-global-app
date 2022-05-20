@@ -1,11 +1,11 @@
 import React from 'react';
 import Register from "./Register";
 
-function SignIn(props) {
+function SignIn() {
     return (
         <div>
 
-                <Register />
+            <Register/>
 
         </div>
     );

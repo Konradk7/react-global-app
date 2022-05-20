@@ -1,11 +1,8 @@
 import React from 'react';
-// import { faSunBright } from "@fortawesome/free-solid-svg-icons";
-// import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import day from '../images/day.png';
 import night from '../images/night.png';
 import hot from '../images/hot.png';
 import cold from '../images/cold.png';
-import trash from "../images/trash.png";
 
 
 function WeatherResult({city, time, temp, sun, remove}) {

@@ -1,6 +1,7 @@
 import React from 'react';
 
-function Register(props) {
+function Register() {
+
     return (
         <div className="register">
             <div className="register-container">

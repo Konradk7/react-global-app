@@ -1,25 +1,19 @@
 import React from 'react';
-import SignIn from "./SignIn";
-import Register from "./Register";
 import Weather from "./Weather";
-import WeatherResult from "./WeatherResult";
 import Crypto from "./Crypto";
 import Fitness from "./Fitness";
 
 
-function Home(props) {
+function Home() {
     return (
 
-            <>
-                <div className="main-page" >
-                    <Fitness />
-                    <Crypto />
-                    {/*<SignIn />*/}
-                    {/*    <Register />*/}
-                    <Weather />
-                    {/*/>*/}
-                </div>
-            </>
+        <>
+            <div className="main-page">
+                <Fitness/>
+                <Crypto/>
+                <Weather/>
+            </div>
+        </>
 
     );
 }

@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
 
-function Meal(props) {
+function Meal() {
     const [ingredients, setIngredients] = useState([]);
-    const [weight, setWeight] = useState(0);
-    const [weightValue, setWeightValue] = useState('');
     const [value, setValue] = useState('');
 
     const handleAddIngredients = e => {
@@ -14,28 +12,34 @@ function Meal(props) {
     const handleAddValue = e => {
         setValue(e.target.value);
     }
-    // const handleWeightValue = e => {
-    //     setWeightValue(e.target.value)
-    // }
-    // const handleWeight = () => {
-    //     setWeight(weightValue);
-    // }
+    const handleRemoveValue = idx => {
+        setIngredients(prevState => prevState.filter(el => el !== ingredients[idx]))
+    }
+
     return (
         <div className="fitness-body__container">
-            <input type="text" value={value} onChange={handleAddValue} className="fitness-body__container__input" placeholder="Add Ingredients!"/>
-            <button onClick={handleAddIngredients} className="fitness-body__container__btn">Add</button>
-                {ingredients.map((el, idx) => {
-                    return <li
-                        className="fitness-body__container__text"
-                        key={idx}
-                        >
-                        {el}
-                        {/*<input type="number" value={weightValue} onChange={handleWeightValue}/>*/}
-                        {/*<button onClick={handleWeight}>Add weight</button>*/}
-                        {/*<button>Add macro's</button>*/}
-                        {/*<button>Remove</button>*/}
-                    </li>
-                })}
+            <input
+                type="text"
+                value={value}
+                onChange={handleAddValue}
+                className="fitness-body__container__input"
+                placeholder="Add Ingredients!"
+            />
+            <button
+                onClick={handleAddIngredients}
+                className="fitness-body__container__btn">
+                Add
+            </button>
+            {ingredients.map((el, idx) => {
+                return <li
+                    className="fitness-body__container__text"
+                    key={idx}
+                    onClick={() => handleRemoveValue(idx)}
+                >
+                    {el}
+
+                </li>
+            })}
         </div>
     );
 }

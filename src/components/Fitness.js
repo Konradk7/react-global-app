@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState } from 'react';
 import NewMeal from "./NewMeal";
-import Meal from './Meal';
+
 
 function Fitness(props) {
     const [day, setDay] = useState([]);
@@ -31,7 +31,8 @@ function Fitness(props) {
 
                             <div style={{display: 'flex'}}>
                                 <li className="fitness-app-container__head-element">{day}</li>
-                                <button onClick={() => handleRemoveDay(idx)} className="fitness-app__btn__remove">X</button>
+                                <button onClick={() => handleRemoveDay(idx)} className="fitness-app__btn__remove">X
+                                </button>
                             </div>
                             <NewMeal/>
 

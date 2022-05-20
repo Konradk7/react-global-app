@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CryptoResult({name, icon, symbol, price, err, remove}) {
+function CryptoResult({name, icon, symbol, price, remove}) {
     if (name.length === 0) return null
     return (
 

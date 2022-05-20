@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState } from 'react';
 import CryptoSearch from "./CryptoSearch";
 import CryptoResult from "./CryptoResult";
 
-function Crypto(props) {
+function Crypto() {
     const [coin, setCoin] = useState('');
     const [search, setSearch] = useState('');
     const [coinIcon, setCoinIcon] = useState('');
@@ -59,14 +59,7 @@ function Crypto(props) {
                 setErr(true);
             })
     }
-    // useEffect(() => {
-    //     const intervalId = setInterval(() => {
-    //         if (coin.length === 0) return;
-    //         setPrice(price)
-    //     }, 1000)
-    //     return clearInterval(intervalId);
-    // },[price])
-    //
+
     return (
         <div className="crypto-app">
 

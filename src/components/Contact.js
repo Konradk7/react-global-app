@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import photo from "../images/profile-photo.jpeg";
 import mail from "../images/mail.png";
 import phone from "../images/phone.png";

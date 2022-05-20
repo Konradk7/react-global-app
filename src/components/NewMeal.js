@@ -2,31 +2,42 @@ import React, {useState} from 'react';
 import Meal from "./Meal";
 import plus from "../images/plus.png";
 
-function NewMeal({onNewMeal}) {
+function NewMeal() {
     const [title, setTitle] = useState([]);
     const [value, setValue] = useState('')
 
     const handleAddTitle = e => {
-            setTitle(prevState => [...prevState, value]);
-            setValue('');
+        setTitle(prevState => [...prevState, value]);
+        setValue('');
     }
     const handleAddItem = e => {
         setValue(e.target.value)
     }
-    const handleRemoveTitle = id => {
-        setTitle(prevState => prevState.filter(title => title !== id));
+    const handleRemoveTitle = idx => {
+        setTitle(prevState => prevState.filter(el => el !== title[idx]));
     };
+
 
     return (
 
         <div className="fitness-title__container">
-            <input type="text" value={value} onChange={handleAddItem} placeholder="Add meals..." className="fitness-title__container__input"/>
-            <button onClick={handleAddTitle} className="fitness-title__container__button"><img src={plus} alt="Add"/></button>
+            <input
+                type="text"
+                value={value}
+                onChange={handleAddItem}
+                placeholder="Add meals..."
+                className="fitness-title__container__input"/>
+            <button
+                onClick={handleAddTitle}
+                className="fitness-title__container__button">
+                <img src={plus} alt="Add"/>
+            </button>
             {title.map((title, idx) => {
                 return <ul key={idx} className="fitness-title__container__list">
                     {title}
-                    <button onClick={handleRemoveTitle} className="fitness-title__container__list-remove">x</button>
-                    <Meal />
+                    <button onClick={() => handleRemoveTitle(idx)} className="fitness-title__container__list-remove">x
+                    </button>
+                    <Meal/>
                 </ul>
             })}
         </div>

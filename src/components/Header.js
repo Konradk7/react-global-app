@@ -2,7 +2,8 @@ import React from 'react';
 import {
     Link
 } from "react-router-dom";
-function Header(props) {
+
+function Header() {
     return (
         <div className="header">
             <div className="header-container">
@@ -16,11 +17,6 @@ function Header(props) {
                     <Link to="/my-apps">My Apps</Link>
                     <Link to="/contact">Contact</Link>
                     <Link to="/signIn">Sign In</Link>
-                    {/*<div className="header-container__nav-hamburger">*/}
-                    {/*<span></span>*/}
-                    {/*<span></span>*/}
-                    {/*<span></span>*/}
-                    {/*</div>*/}
                 </nav>
 
             </div>

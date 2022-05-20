@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import WeatherForm from "./WeatherForm";
 import WeatherResult from "./WeatherResult";
-import {APIKey} from "../api/WeatherApi";
+import { APIKey } from "../api/WeatherApi";
 
 
 function Weather(props) {
@@ -36,7 +36,7 @@ function Weather(props) {
         const APIUrl = `https://api.openweathermap.org/data/2.5/weather?q=${value}&APPID=${APIKey}&units=metric`;
 
         if (value.length !== 0) return (
-            fetch(APIUrl)//async/await
+            fetch(APIUrl)
                 .then(response => {
                     if (response.ok) {
                         return response
