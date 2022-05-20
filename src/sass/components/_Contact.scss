@@ -8,7 +8,6 @@
     background: $color-contact-main;
     height: 100%;
     border-radius: toRem(10);
-
     @extend %border;
     @extend %box-shadow;
     font-family: C059;
@@ -17,8 +16,8 @@
       display: flex;
       justify-content: space-between;
       &-info {
-        padding: toRem(35) toRem(50) 0 toRem(50);
         font-family: Chandas;
+        padding: toRem(35) toRem(50) 0 toRem(50);
 
         h1, h2 {
           display: flex;
