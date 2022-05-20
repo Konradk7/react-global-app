@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import NewMeal from "./NewMeal";
 
 
@@ -36,7 +36,7 @@ function Fitness(props) {
                                 </button>
                             </div>
 
-                                <NewMeal />
+                            <NewMeal/>
 
                         </ul>
                     )

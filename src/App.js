@@ -1,18 +1,20 @@
 import React from 'react';
-import './sass/App.scss';
-import Header from "./components/Header";
-import Home from "./components/Home";
-import MyApps from "./components/MyApps";
-import Contact from "./components/Contact";
-import SignIn from "./components/SignIn";
 import {
     BrowserRouter as Router,
     Routes,
     Route,
     Link
 } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import MyApps from "./components/MyApps";
+import Contact from "./components/Contact";
+import SignIn from "./components/SignIn";
+import './sass/App.scss';
 
-function App(props) {
+
+function App() {
+
     return (
         <Router>
             <Header/>
