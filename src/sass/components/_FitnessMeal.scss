@@ -16,8 +16,9 @@
   &__btn {
     font-size: toRem(17);
     font-weight: bold;
-    width: toRem(50);
-    height: toRem(26);
+    //min-width: toRem(50);
+    //min-height: toRem(26);
+    padding: toRem(1) toRem(3);
     background: darkslategrey;
     border-radius: 0 toRem(15) toRem(15) 0;
     border: toRem(2) solid black;
@@ -34,7 +35,7 @@
     padding: toRem(2) 0;
     text-shadow: none;
     cursor: pointer;
-    list-style: number;
+    list-style: number !important;
     transition: 0.2s;
 
     &:hover {
