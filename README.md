@@ -1,3 +1,5 @@
+# This app is working perfectly on full hd + resolutions! On mobile phone's it have some problem's. 
+
 # Last bootcamp project, using framework React by Konrad Kedron
 
 * I want to merge some kinds of applications to make just one app.
