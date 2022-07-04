@@ -1,9 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
     Link
 } from "react-router-dom";
+import Menu from "../images/icons8-menu.svg";
 
-function Header() {
+function Header(props) {
+    const [showNav, setShowNav] = useState(false);
+
+    const handleShowNav = () => {
+        setShowNav(!showNav)
+    }
+
     return (
         <div className="header">
             <div className="header-container">
@@ -11,13 +18,13 @@ function Header() {
                     Coders
                     <span className="header-container__logo-element">KK</span>
                 </a>
-
-                <nav className="header-container__nav">
+                <nav className={`header-container__nav ${showNav ? "hide" : ""}`}>
                     <Link to="/">Home</Link>
                     <Link to="/my-apps">My Apps</Link>
                     <Link to="/contact">Contact</Link>
                     <Link to="/signIn">Sign In</Link>
                 </nav>
+                <button onClick={handleShowNav} style={{height: "100%", width: "100px", background: "gray"}}><img src={Menu} alt="menu"/></button>
 
             </div>
         </div>
