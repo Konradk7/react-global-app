@@ -8,11 +8,14 @@ function Home() {
     return (
 
         <>
+            <h2></h2>
+
             <div className="main-page">
                 <Fitness/>
                 <Crypto/>
                 <Weather/>
             </div>
+
         </>
 
     );
