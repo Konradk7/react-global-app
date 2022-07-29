@@ -24,7 +24,7 @@ function Header(props) {
                     <Link to="/contact">Contact</Link>
                     <Link to="/signIn">Sign In</Link>
                 </nav>
-                <button onClick={handleShowNav} style={{height: "100%", width: "100px", background: "gray"}}><img src={Menu} alt="menu"/></button>
+                <button onClick={handleShowNav} className="header-container__btn"><img src={Menu} alt="menu"/></button>
 
             </div>
         </div>
